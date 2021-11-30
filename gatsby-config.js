@@ -5,6 +5,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
+    `gatsby-plugin-styled-components`,
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -38,6 +39,14 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
+    },
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true, // defaults to false
+        jsxPragma: `jsx`, // defaults to "React"
+        allExtensions: true, // defaults to false
+      },
     },
   ],
 };
