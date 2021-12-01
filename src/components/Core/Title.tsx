@@ -66,6 +66,7 @@ const CardTitle = styled.h4`
 `;
 
 interface TitleProps {
+  color?: any;
   variant?: "section" | "hero" | "card";
 }
 const Title: React.FC<TitleProps> = ({ variant, ...rest }) => {

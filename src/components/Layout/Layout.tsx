@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet";
 import AOS from "aos";
 
 import Header from "../Header";
-// import Footer from "../Footer";
+import Footer from "../Footer";
 
 // import ModalVideo from "../ModalVideo";
 
@@ -158,7 +158,7 @@ const Layout = ({ children, pageContext }: any) => {
           <Header isDark={gContext.headerDark} />
           {children}
 
-          {/* <Footer isDark={gContext.footerDark} /> */}
+          <Footer isDark={gContext.footerDark} />
         </div>
 
         {/* <ModalVideo /> */}

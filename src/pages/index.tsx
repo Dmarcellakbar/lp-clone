@@ -7,7 +7,7 @@ import License from "../components/sections/home/License";
 // markup
 const IndexPage = () => {
   return (
-    <PageWrapper footerDark>
+    <PageWrapper footerDark={false}>
         <Hero />
         <License />
         {/* <Clients />

@@ -50,7 +50,7 @@ const ButtonStyled = styled.button`
 const NotFoundPage = () => {
   return (
     <>
-      <PageWrapper footerDark>
+      <PageWrapper footerDark={false}>
         <Section>
           <div className="pt-5"></div>
           <Container>

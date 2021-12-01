@@ -28,6 +28,7 @@ const Box = styled.div<{
   pr?: any;
   pt?: any;
   pb?: any;
+  css?: any;
 }>`
   box-sizing: border-box;
   min-width: ${props => props.minWidth || "0"};
@@ -54,6 +55,7 @@ const Box = styled.div<{
   ${position};
   ${shadow};
   ${props => props.py};
+  ${props => props.css}
 `;
 
 export default Box;
