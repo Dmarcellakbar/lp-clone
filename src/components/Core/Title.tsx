@@ -33,6 +33,11 @@ const HeroTitle = styled(SectionTitle)`
   line-height: 56px;
   margin-bottom: 30px;
 
+  em {
+    color: ${({theme}) => theme.colors.primary};
+    font-style: normal;
+  }
+
   @media ${device.sm} {
     font-size: 40px;
     line-height: 70px;

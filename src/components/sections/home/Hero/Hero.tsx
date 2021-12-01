@@ -24,36 +24,36 @@ const ShapeTopLeft = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const TopCard = styled(Box)`
-  width: 305px;
-  box-shadow: ${({ theme }) => `0 32px 34px ${theme.colors.shadow}`};
-  position: absolute;
-  top: 14%;
-  left: 0;
-  @media ${device.md} {
-    left: -13%;
-  }
-  @media ${device.lg} {
-    left: 2%;
-  }
-`;
+// const TopCard = styled(Box)`
+//   width: 305px;
+//   box-shadow: ${({ theme }) => `0 32px 34px ${theme.colors.shadow}`};
+//   position: absolute;
+//   top: 14%;
+//   left: 0;
+//   @media ${device.md} {
+//     left: -13%;
+//   }
+//   @media ${device.lg} {
+//     left: 2%;
+//   }
+// `;
 
-const BottomCard = styled(Box)`
-  width: 305px;
-  box-shadow: ${({ theme }) => `0 32px 34px ${theme.colors.shadow}`};
-  position: absolute;
-  bottom: 12%;
-  right: 0;
-  @media ${device.md} {
-    right: -13%;
-  }
-  @media ${device.lg} {
-    right: -5%;
-  }
-  @media ${device.xl} {
-    right: -33%;
-  }
-`;
+// const BottomCard = styled(Box)`
+//   width: 305px;
+//   box-shadow: ${({ theme }) => `0 32px 34px ${theme.colors.shadow}`};
+//   position: absolute;
+//   bottom: 12%;
+//   right: 0;
+//   @media ${device.md} {
+//     right: -13%;
+//   }
+//   @media ${device.lg} {
+//     right: -5%;
+//   }
+//   @media ${device.xl} {
+//     right: -33%;
+//   }
+// `;
 
 const ImgRight = styled.img`
   max-width: 50%;
@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
               >
                 <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
                   <Title variant="hero">
-                    TAMING THE CRYPTO MARKET
+                    TAMING THE <em>CRYPTO MARKET</em>
                   </Title>
                   <Text mb={4}>
                     Helping you navigate the digital market. <br/>
