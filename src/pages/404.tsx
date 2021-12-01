@@ -1,54 +1,81 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
+import { Container } from "react-bootstrap";
+import styled from "styled-components";
+import { rgba } from "polished";
+import Section from "../components/Section";
+import PageWrapper from "../components/PageWrapper";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import imgIcon from "../assets/image/png/heart-shape.png";
+import { Title, Text } from "../components/Core";
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
+const ContentIcon = styled.div`
+  width: 118px;
+  height: 118px;
+  background-color: ${({ theme }) => rgba(theme.colors.primary, 0.1)};
+  border-radius: 500px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 48px;
+`;
 
-// markup
+const ButtonStyled = styled.button`
+  min-width: 250px;
+  min-height: 60px;
+  border-radius: 10px;
+  border: ${({ theme }) => `1px solid ${theme.colors.primary}`};
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.66px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  transition: 0.4s;
+  &:hover,
+  &:focus {
+    background: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.light};
+    box-shadow: none;
+    outline: none;
+  }
+`;
+
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
-  )
-}
+    <>
+      <PageWrapper footerDark>
+        <Section>
+          <div className="pt-5"></div>
+          <Container>
+            <div className="text-center">
+              <ContentIcon>
+                <img src={imgIcon} alt="" className="img-fluid" />
+              </ContentIcon>
+              <div>
+                <Title variant="hero">404 Error!</Title>
+                <Text>
+                  The page you are looking for is not available or doesn’t
+                  <br className="d-none d-md-block" /> belong to this website!
+                </Text>
+              </div>
+              <div className="mt-5">
+                <Link to="/">
+                  <ButtonStyled>Go back to home</ButtonStyled>
+                </Link>
+              </div>
+            </div>
+          </Container>
+        </Section>
+      </PageWrapper>
+    </>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;
