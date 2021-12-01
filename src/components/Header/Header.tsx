@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import styled, {DefaultTheme, StyledComponentBase} from "styled-components";
+import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { Link } from "gatsby";
@@ -429,14 +429,14 @@ const Header = ({ isDark = false }) => {
                 </Menu>
               </div>
             </div>
-            <div className="header-btns ml-auto ml-lg-0 d-none d-md-block">
+            {/* <div className="header-btns ml-auto ml-lg-0 d-none d-md-block">
               <Link
                 className="btn-red hvr-bounce-to-left"
                 to="/"
               >
                 Get Started
               </Link>
-            </div>
+            </div> */}
             <ToggleButton
               className={`navbar-toggler btn-close-off-canvas ml-3 ${
                 gContext.visibleOffCanvas ? "collapsed" : ""

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import imgL1Logo from "../../assets/image/png/l1-logo.png";
-import imgL1LogoWhite from "../../assets/image/png/logo-white.png";
+// import imgL1Logo from "../../assets/image/png/l1-logo.png";
+// import imgL1LogoWhite from "../../assets/image/png/logo-white.png";
+import logo from "../../assets/image/cfund/logo.png";
 
 interface LogoProps {
   white?: boolean
@@ -14,9 +15,9 @@ const Logo: React.FC<LogoProps> = ({ white, height, className = "", ...rest }) =
   return (
     <Link to="/" className={`${className}`} {...rest}>
       {white ? (
-        <img src={imgL1LogoWhite} alt="" />
+        <img src={logo} alt="" />
       ) : (
-        <img src={imgL1Logo} alt="" />
+        <img src={logo} alt="" />
       )}
     </Link>
   );
