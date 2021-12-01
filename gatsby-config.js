@@ -1,3 +1,8 @@
+require("dotenv").config({
+  // path: `.env.${process.env.NODE_ENV}`,
+  path: '.env'
+})
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -6,7 +11,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     `gatsby-plugin-styled-components`,
-    "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

@@ -19,7 +19,7 @@ import GlobalContext from "../../context/GlobalContext";
 
 import GlobalStyle from "../../utils/globalStyle";
 
-import imgFavicon from "../../assets/favicon.png";
+// import imgFavicon from "../../assets/favicon.png";
 
 import "../../assets/fonts/fontawesome-5/webfonts/fa-brands-400.ttf";
 import "../../assets/fonts/fontawesome-5/webfonts/fa-regular-400.ttf";
@@ -121,8 +121,7 @@ const Layout = ({ children, pageContext }: any) => {
       >
         <GlobalStyle />
         <Helmet>
-          <title>Omega</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          <title>{process.env.GATSBY_TITLE}</title>
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">
@@ -148,8 +147,7 @@ const Layout = ({ children, pageContext }: any) => {
         
         <GlobalStyle />
         <Helmet>
-          <title>Omega</title>
-          <link rel="icon" type="image/png" href={imgFavicon} />
+          <title>{process.env.GATSBY_TITLE}</title>
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">
