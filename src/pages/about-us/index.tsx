@@ -4,6 +4,7 @@ import PageWrapper from "../../components/PageWrapper";
 import { Teams } from "../../components/sections/about-us";
 import { Section, Text } from "../../components/Core";
 import { Col, Container, Row } from "react-bootstrap";
+import { ContactUs } from "../../components/sections/common";
 
 
 // markup
@@ -27,6 +28,7 @@ const AboutUsPage = () => {
           </Container>
         </Section>
         <Teams/>
+        <ContactUs/>
     </PageWrapper>
   )
 }

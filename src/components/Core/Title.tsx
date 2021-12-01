@@ -67,6 +67,7 @@ const CardTitle = styled.h4`
 
 interface TitleProps {
   color?: any;
+  fontSize?: any;
   variant?: "section" | "hero" | "card";
   mb?: any
 }
