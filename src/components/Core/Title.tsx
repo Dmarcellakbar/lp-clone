@@ -68,6 +68,7 @@ const CardTitle = styled.h4`
 interface TitleProps {
   color?: any;
   variant?: "section" | "hero" | "card";
+  mb?: any
 }
 const Title: React.FC<TitleProps> = ({ variant, ...rest }) => {
   let TitleStyled = SectionTitle;
