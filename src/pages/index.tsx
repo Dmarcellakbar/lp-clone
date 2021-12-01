@@ -1,4 +1,5 @@
 import * as React from "react"
+import { ContactUs } from "../components/sections/common";
 import PageWrapper from "../components/PageWrapper";
 import Hero from "../components/sections/home/Hero";
 import License from "../components/sections/home/License";
@@ -10,12 +11,7 @@ const IndexPage = () => {
     <PageWrapper footerDark={false}>
         <Hero />
         <License />
-        {/* <Clients />
-        <Feature />
-        <Content1 />
-        <Content2 />
-        <Testimonial />
-        <CTA /> */}
+        <ContactUs/>
     </PageWrapper>
   )
 }

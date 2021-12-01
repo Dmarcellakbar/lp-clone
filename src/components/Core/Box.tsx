@@ -22,6 +22,7 @@ const Box = styled.div<{
   borderRadius?: any;
   mr?: any;
   ml?: any;
+  mt?: any; 
   mb?: any;
   mx?: any;
   p?: any;
@@ -40,6 +41,7 @@ const Box = styled.div<{
   margin-bottom: ${props => props.mb || "0"};
   margin-left:  ${props => props.ml || "0"};
   margin-right: ${props => props.mr || "0"};
+  margin-top: ${props => props.mt || "0"};
   padding: ${props => props.p || "0"};
   padding-right: ${props => props.pr || "0"};
   padding-top: ${props => props.pt || "0"};

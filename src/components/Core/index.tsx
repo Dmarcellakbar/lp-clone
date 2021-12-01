@@ -4,11 +4,13 @@ import Box from "./Box";
 import Section from "./Section";
 import Text from "./Text";
 import Input from "./Input";
+import Span from "./Span";
 export {
     Button,
     Title,
     Box,
     Section,
     Text,
-    Input
+    Input,
+    Span
 }
