@@ -5,7 +5,7 @@ interface SectionProps {
   className?: string;
 }
 const Section: React.FC<SectionProps> = (props) => {
-  return <Box py={[5, null, "80px", 6]} {...props} />;
+  return <Box py={[5, null, "80px", 5]} {...props} />;
 };
 
 export default Section;

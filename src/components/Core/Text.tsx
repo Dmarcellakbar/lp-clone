@@ -37,6 +37,8 @@ interface TextProps {
   fontSize?: number;
   lineHeight?: string;
   mb?: number;
+  as?: any;
+  className?: string;
 }
 const Text: React.FC<TextProps> = ({ variant, ...props }) => {
   let TextRender;
