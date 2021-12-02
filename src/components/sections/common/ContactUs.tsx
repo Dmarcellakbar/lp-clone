@@ -6,12 +6,32 @@ import { Title, Button, Section, Box, Text, Input } from "../../../components/Co
 
 const FormStyled = styled.form``;
 
-const ContactUs = () => {
+interface ContactUsProps {
+  backgroundColor?: string;
+  title?: string
+  titleSize?: {
+    sm?: string
+    lg?: string
+  }
+}
+const ContactUs: React.FC<ContactUsProps> = ({backgroundColor = '#f7f7fb', title = 'Contact us,', titleSize = {
+  sm: '20px',
+  lg: '46px'
+}}) => {
   return (
     <>
-      <Section bg="#f7f7fb">
+      <Section bg={backgroundColor}>
         <Container>
           <Row className="align-items-center">
+            <Col lg="12">
+              <Box mb={5}>
+                <Title 
+                  fontSize={titleSize}
+                >
+                  {title}
+                </Title>
+              </Box>
+            </Col>
             <Col lg="6">
               <FormStyled
                 name="contact1"
@@ -21,10 +41,6 @@ const ContactUs = () => {
               >
                 {/* You still need to add the hidden input with the form name to your JSX form */}
                 <input type="hidden" name="form-name" value="contact1" />
-
-                <Box mb={5}>
-                  <Title>Contact us,</Title>
-                </Box>
                 <Box mb={3}>
                   <Input
                     type="text"

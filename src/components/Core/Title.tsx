@@ -3,20 +3,22 @@ import styled from "styled-components";
 import { color, space, typography, shadow } from "styled-system";
 import { device } from "../../utils";
 
-const SectionTitle = styled.h2`
+const SectionTitle = styled.h2<{
+  fontSize?: any
+}>`
   font-weight: 700;
   letter-spacing: -2.5px;
-  font-size: 40px;
+  font-size: ${props => props.fontSize?.default};
   line-height: 54px;
   margin-bottom: 16px;
 
   @media ${device.sm} {
-    font-size: 50px;
+    font-size: ${props => props.fontSize?.sm};
     line-height: 62px;
   }
 
   @media ${device.lg} {
-    font-size: 60px;
+    font-size: ${props => props.fontSize?.lg};
     line-height: 70px;
     margin-bottom: 30px;
   }
@@ -65,9 +67,12 @@ const CardTitle = styled.h4`
   ${shadow};
 `;
 
-interface TitleProps {
+export interface TitleProps {
   color?: any;
-  fontSize?: any;
+  fontSize?: any | {
+    sm?: number
+    lg?: number
+  };
   variant?: "section" | "hero" | "card";
   mb?: any
 }
