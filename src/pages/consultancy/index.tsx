@@ -5,7 +5,7 @@ import { ContactUs } from "../../components/sections/common";
 
 
 // markup
-const News = () => {
+const Consultancy = () => {
   return (
     <PageWrapper footerDark={false}>
         <Hero title="TAMING THE CRYPTO MARKET">
@@ -37,4 +37,4 @@ const News = () => {
   )
 }
 
-export default News
+export default Consultancy

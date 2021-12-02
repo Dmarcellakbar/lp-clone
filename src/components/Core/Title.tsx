@@ -7,8 +7,7 @@ const SectionTitle = styled.h2<{
   fontSize?: any
 }>`
   font-weight: 700;
-  letter-spacing: -2.5px;
-  font-size: ${props => props.fontSize?.default};
+  font-size: ${props => props.fontSize?.lg};
   line-height: 54px;
   margin-bottom: 16px;
 
@@ -19,6 +18,7 @@ const SectionTitle = styled.h2<{
 
   @media ${device.lg} {
     font-size: ${props => props.fontSize?.lg};
+    letter-spacing: -0.5px;
     line-height: 70px;
     margin-bottom: 30px;
   }
@@ -72,9 +72,13 @@ export interface TitleProps {
   fontSize?: any | {
     sm?: number
     lg?: number
+    default?: number
   };
   variant?: "section" | "hero" | "card";
   mb?: any
+  as?: any
+  htmlFor?: any
+  className?: string
 }
 const Title: React.FC<TitleProps> = ({ variant, ...rest }) => {
   let TitleStyled = SectionTitle;

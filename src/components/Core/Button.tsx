@@ -11,7 +11,12 @@ import {
   layout,
 } from "styled-system";
 
-const ButtonSolid = styled.button`
+const ButtonSolid = styled.button<{
+  color?: any
+  border?: any
+  borderColor?: any
+  bg?: any
+}>`
   padding: 0.85rem 1.75rem;
   min-width: 200px;
   border-radius: 5px;

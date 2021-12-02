@@ -100,6 +100,7 @@ interface InputProps {
     name?: string
     required?: boolean
     rows?: number
+    id?: any
 }
 const Input: React.FC<InputProps> = ({
   variant = "solid",

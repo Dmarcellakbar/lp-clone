@@ -14,10 +14,13 @@ interface ContactUsProps {
     lg?: string
   }
 }
-const ContactUs: React.FC<ContactUsProps> = ({backgroundColor = '#f7f7fb', title = 'Contact us,', titleSize = {
-  sm: '20px',
-  lg: '46px'
-}}) => {
+const ContactUs: React.FC<ContactUsProps> = (
+  {
+    backgroundColor = '#f7f7fb', title = 'Contact us,', titleSize = {
+    sm: '20px',
+    lg: '46px',
+  }
+}) => {
   return (
     <>
       <Section bg={backgroundColor}>

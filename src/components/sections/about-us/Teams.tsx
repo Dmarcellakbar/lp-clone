@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../../components/Core";
 import imgContentMobile from "../../../assets/image/png/content-img1--mobile.webp";
+import imgKurnia from "../../../assets/image/cfund/new-assets/about-us-kurnia-2.jpg";
 
 const Teams = () => (
   <>
@@ -17,7 +18,7 @@ const Teams = () => (
                 data-aos-duration="750"
                 data-aos-once="true"
               >
-                <img src={imgContentMobile} alt="" className="img-fluid" />
+                <img src={imgKurnia} alt="" className="img-fluid" style={{borderRadius: 10}}/>
               </div>
             </div>
           </Col>
