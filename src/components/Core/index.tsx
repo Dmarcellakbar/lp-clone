@@ -5,6 +5,7 @@ import Section from "./Section";
 import Text from "./Text";
 import Input from "./Input";
 import Span from "./Span";
+import A from "./A";
 export {
     Button,
     Title,
@@ -12,5 +13,6 @@ export {
     Section,
     Text,
     Input,
-    Span
+    Span,
+    A,
 }

@@ -3,6 +3,7 @@ import Hero from "../../components/sections/common/Hero";
 import PageWrapper from "../../components/PageWrapper";
 import ContactUs2 from "../../components/sections/common/ContactUs2";
 import { Button } from "../../components/Core";
+import EducationVideo from "../../components/sections/education/EducationVideo";
 
 
 // markup
@@ -25,6 +26,7 @@ const Education = () => {
             </Row>
           </Container>
         </Section> */}
+        <EducationVideo/>
         <ContactUs2
             title="Or you can learn the basics of crypto trading with us, Contact us, or go to our Official Trading Education Class."
             backgroundColor={''}

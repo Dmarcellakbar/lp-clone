@@ -4,7 +4,6 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Button, Section, Box, Input } from "../../../components/Core";
 
-import { device } from "../../../utils";
 
 const FormStyled = styled.form``;
 

@@ -16,7 +16,7 @@ const AboutUsPage = () => {
             One stop solution for Digital Asset
         </Hero>
         <Section className="pb-0">
-          <div className="pt-5"></div>
+          {/* <div className="pt-5"></div> */}
           <Container>
             <Row className="justify-content-center text-center">
               <Col lg="12">
