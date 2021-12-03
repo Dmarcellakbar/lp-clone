@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
           <Row className="justify-content-center align-items-center">
             <Col lg="5" md="8" sm="9" className="order-lg-2">
               <div className="text-center text-lg-right position-relative">
-                <div
+                {/* <div
                   className="img-main"
                   data-aos="fade-down"
                   data-aos-duration="750"
@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
                   data-aos-delay="500"
                 >
                   <ImgRight src={imgL1HeroPhone} alt="" />
-                </div>
+                </div> */}
 
                 {/* <TopCard
                   bg="secondary"
