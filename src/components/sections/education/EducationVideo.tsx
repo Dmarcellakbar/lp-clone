@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
-import { Title, Section, Box, Text, A } from "../../../components/Core";
+import { Section, Box, Text } from "../../../components/Core";
 
 import GlobalContext from "../../../context/GlobalContext";
 
@@ -53,16 +53,16 @@ const EducationVideo = () => {
             <Col md="8" lg="7" xl="6">
               <div className="text-center pb-5">
                 {/* <Title color="light">Here you can use the material we provide to gain about insight in crypto market</Title> */}
-                <A
+                {/* <A
                   href="#"
                   className="video-link"
                   data-fancybox=""
                   onClick={openVideoModal}
-                >
+                > */}
                   <Text color="lightShade">
                   Here you can use the material we provide to gain about insight in crypto market
                   </Text>
-                </A>
+                {/* </A> */}
               </div>
             </Col>
           </Row>

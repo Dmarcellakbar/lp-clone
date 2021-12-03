@@ -4,6 +4,9 @@ import PageWrapper from "../../components/PageWrapper";
 import ContactUs2 from "../../components/sections/common/ContactUs2";
 import { Button } from "../../components/Core";
 import EducationVideo from "../../components/sections/education/EducationVideo";
+import EducationContent from "../../components/sections/education/EducationContent";
+import {Section, Text} from "../../components/core";
+import { Col, Container, Row } from "react-bootstrap";
 
 
 // markup
@@ -27,6 +30,7 @@ const Education = () => {
           </Container>
         </Section> */}
         <EducationVideo/>
+        <EducationContent/>
         <ContactUs2
             title="Or you can learn the basics of crypto trading with us, Contact us, or go to our Official Trading Education Class."
             backgroundColor={''}
