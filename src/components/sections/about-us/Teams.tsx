@@ -4,7 +4,8 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Section, Box, Text } from "../../../components/Core";
 // import imgContentMobile from "../../../assets/image/png/content-img1--mobile.webp";
 import imgKurnia from "../../../assets/image/cfund/new-assets/about-us-kurnia-2.jpg";
-import imgArya from "../../../assets/image/cfund/new-assets/about-us-arya.webp";
+import imgArya from "../../../assets/image/cfund/new-assets/about-us-arya-6.jpg";
+
 
 
 const Teams = () => (
