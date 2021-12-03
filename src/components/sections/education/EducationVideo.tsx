@@ -50,7 +50,7 @@ const EducationVideo = () => {
       <Section className="position-relative pb-0" bg="dark">
         <Container>
           <Row className="justify-content-center">
-            <Col md="8" lg="7" xl="6">
+            <Col md="8" lg="12" xl="12">
               <div className="text-center pb-5">
                 {/* <Title color="light">Here you can use the material we provide to gain about insight in crypto market</Title> */}
                 {/* <A
@@ -59,8 +59,8 @@ const EducationVideo = () => {
                   data-fancybox=""
                   onClick={openVideoModal}
                 > */}
-                  <Text color="lightShade">
-                  Here you can use the material we provide to gain about insight in crypto market
+                  <Text color="lightShade" fontSize={40}>
+                    Here you can use the material we provide to gain about insight in crypto market
                   </Text>
                 {/* </A> */}
               </div>
