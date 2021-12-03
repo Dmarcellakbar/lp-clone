@@ -177,16 +177,21 @@ const MenuItem: React.FC<{
   );
 };
 
-const NestedMenu = ({ menuItems = defaultMenuItems }) => {
+const NestedMenu: React.FC<{
+  menuItems?: any[]
+  location?: any
+}> = (props) => {
+  const { menuItems = defaultMenuItems } = props
   return (
     <NestedMenuContainer>
       <ListGroup variant="flush">
-        {menuItems.map((menuItem, index) => (
+        {menuItems && menuItems.map((menuitem: any, index) => (
           <MenuItem
-            key={`${menuItem.name}${index}`}
+            key={`${menuitem.name}${index}`}
             depthStep={20}
             depth={0}
-            {...menuItem}
+            location={props.location}
+            {...menuitem}
           />
         ))}
       </ListGroup>
