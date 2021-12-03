@@ -78,7 +78,7 @@ const getTheme: any = (mode: any) =>{
     colors: get(baseTheme.colors.modes, mode, baseTheme.colors),
 })};
 
-const Layout = ({ children, pageContext }: any) => {
+const Layout = ({ children, pageContext, ...props }: any) => {
   const gContext = useContext(GlobalContext);
 
   const [visibleLoader, setVisibleLoader] = useState(true);
@@ -154,7 +154,7 @@ const Layout = ({ children, pageContext }: any) => {
           </div>
         </Loader>
         <div className="site-wrapper overflow-hidden" ref={eleRef}>
-          <Header isDark={gContext.headerDark} />
+          <Header isDark={gContext.headerDark} {...props} />
           {children}
 
           <Footer isDark={gContext.footerDark} />

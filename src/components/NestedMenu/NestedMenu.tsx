@@ -86,16 +86,18 @@ const MenuItem: React.FC<{
   items?: any[]
   depthStep?: number
   depth?: number
-}> = ({
-  label,
-  isExternal = false,
-  name,
-  path,
-  items,
-  depthStep = 20,
-  depth = 0,
-  ...rest
-}) => {
+  location?: any
+}> = (props) => {
+  const {
+    label,
+    isExternal = false,
+    name,
+    path,
+    items,
+    depthStep = 20,
+    depth = 0,
+    ...rest
+  } = props;
   const [open, setOpen] = useState(false);
   const hasSubItems = Array.isArray(items);
 
@@ -144,7 +146,7 @@ const MenuItem: React.FC<{
             </a>
           ) : (
             <Link
-              className={`${isBrowser() && window.location.pathname === path? 'active' : ''}`}
+              className={`${props?.location?.pathname === path? 'active' : ''}`}
               to={`${path}`}
               onClick={() => {
                 if (gContext.visibleOffCanvas) {

@@ -266,7 +266,14 @@ const MenuDropdown = styled.ul<MenuDropdownProps>`
   }
 `;
 
-const Header = ({ isDark = false }) => {
+const Header: React.FC <{
+  isDark?: boolean
+  location?: any
+}> = (props) => {
+  const { 
+    isDark = false 
+  } = props
+
   const gContext: any = useContext(GlobalContext);
   const [showScrolling, setShowScrolling] = useState<boolean>(false);
   const [showReveal, setShowReveal] = useState<boolean>(false);
@@ -417,7 +424,7 @@ const Header = ({ isDark = false }) => {
                                 </a>
                               ) : (
                                 <Link
-                                  className={`nav-link ${isBrowser() && window.location.pathname === path? 'active' : ''}`}
+                                  className={`nav-link ${props.location.pathname === path? 'active' : ''}`}
                                   to={`${path}`}
                                   role="button"
                                   aria-expanded="false"
@@ -465,7 +472,7 @@ const Header = ({ isDark = false }) => {
         show={gContext.visibleOffCanvas}
         onHideOffcanvas={gContext.toggleOffCanvas}
       >
-        <NestedMenu menuItems={menuItems} />
+        <NestedMenu menuItems={menuItems} {...props}/>
       </Offcanvas>
     </>
   );
