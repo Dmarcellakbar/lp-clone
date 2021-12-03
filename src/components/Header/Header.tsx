@@ -290,7 +290,6 @@ const Header: React.FC <{
       setShowReveal(false);
     }
   });
-  const isBrowser = () => typeof window !== "undefined"
 
   return (
     <>

@@ -102,7 +102,6 @@ const MenuItem: React.FC<{
   const hasSubItems = Array.isArray(items);
 
   const gContext = useContext(GlobalContext);
-  const isBrowser = () => typeof window !== "undefined"
 
   return (
     <>
