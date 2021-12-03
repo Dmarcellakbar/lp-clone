@@ -283,6 +283,7 @@ const Header = ({ isDark = false }) => {
       setShowReveal(false);
     }
   });
+  const isBrowser = () => typeof window !== "undefined"
 
   return (
     <>
@@ -416,7 +417,7 @@ const Header = ({ isDark = false }) => {
                                 </a>
                               ) : (
                                 <Link
-                                  className={`nav-link ${window.location.pathname === path? 'active' : ''}`}
+                                  className={`nav-link ${isBrowser() && window.location.pathname === path? 'active' : ''}`}
                                   to={`${path}`}
                                   role="button"
                                   aria-expanded="false"

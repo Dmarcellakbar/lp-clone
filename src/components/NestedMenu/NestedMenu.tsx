@@ -100,6 +100,7 @@ const MenuItem: React.FC<{
   const hasSubItems = Array.isArray(items);
 
   const gContext = useContext(GlobalContext);
+  const isBrowser = () => typeof window !== "undefined"
 
   return (
     <>
@@ -143,7 +144,7 @@ const MenuItem: React.FC<{
             </a>
           ) : (
             <Link
-              className={`${window.location.pathname === path? 'active' : ''}`}
+              className={`${isBrowser() && window.location.pathname === path? 'active' : ''}`}
               to={`${path}`}
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
