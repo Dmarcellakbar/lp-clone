@@ -1,42 +1,51 @@
 export const menuItems: Array<{
   name: string
   label: string
+  path: string
   isExternal?: boolean
   items?: Array<{
     name: string
     label: string
+    path: string
     isExternal?: boolean
 
     items?: Array<{
       name: string
       label: string
+      path: string
       isExternal?: boolean
     }>
   }>
 }> = [
   {
     name: "",
+    path: "/",
     label: "Home"
   },
   {
     name: "about-us",
-    label: "About Us"
+    label: "About Us",
+    path: '/about-us'
   },
   {
     name: "consultancy",
-    label: "Consultancy"
+    label: "Consultancy",
+    path: '/consultancy'
   },
   {
     name: "news",
-    label: "News"
+    label: "News",
+    path: '/news'
   },
   {
     name: "education",
-    label: "Education"
+    label: "Education",
+    path: '/education'
   },
   {
     name: "contact-us",
-    label: "Contact Us"
+    label: "Contact Us",
+    path: '/contact-us'
   },
   // {
   //   name: "pages",

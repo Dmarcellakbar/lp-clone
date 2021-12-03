@@ -126,7 +126,7 @@ const Menu  = styled.ul<MenuProps>`
     > .nav-link {
       @media ${device.lg} {
         color: ${({ dark, theme }) =>
-          dark ? theme.colors.light : theme.colors.darkShade}!important;
+          dark ? theme.colors.light : theme.colors.darkShade};
         font-size: 16px;
         font-weight: 500;
         line-height: 24px;
@@ -138,6 +138,10 @@ const Menu  = styled.ul<MenuProps>`
       &:hover {
         color: ${({ theme }) => theme.colors.primary} !important;
       }
+    }
+
+    > .nav-link.active {
+      color: ${({ theme }) => theme.colors.secondary} !important;
     }
   }
   .nav-item.dropdown {
@@ -302,7 +306,7 @@ const Header = ({ isDark = false }) => {
                 >
                   {menuItems.map(
                     (
-                      { label, isExternal = false, name, items, ...rest },
+                      { label, isExternal = false, name, path , items, ...rest },
                       index
                     ) => {
                       const hasSubItems = Array.isArray(items);
@@ -311,7 +315,7 @@ const Header = ({ isDark = false }) => {
                           {hasSubItems ? (
                             <li className="nav-item dropdown" {...rest}>
                               <a
-                                className="nav-link dropdown-toggle"
+                                className={`nav-link dropdown-toggle`}
                                 role="button"
                                 data-toggle="dropdown"
                                 aria-expanded="false"
@@ -359,7 +363,7 @@ const Header = ({ isDark = false }) => {
                                                 >
                                                   {itemInner?.isExternal ? (
                                                     <a
-                                                      href={`${itemInner.name}`}
+                                                      href={`${itemInner.path}`}
                                                       target="_blank"
                                                       rel="noopener noreferrer"
                                                     >
@@ -367,7 +371,7 @@ const Header = ({ isDark = false }) => {
                                                     </a>
                                                   ) : (
                                                     <Link
-                                                      to={`/${itemInner.name}`}
+                                                      to={`${itemInner.path}`}
                                                     >
                                                       {itemInner.label}
                                                     </Link>
@@ -381,14 +385,14 @@ const Header = ({ isDark = false }) => {
                                         <li className="drop-menu-item">
                                           {subItem?.isExternal ? (
                                             <a
-                                              href={`${subItem.name}`}
+                                              href={`${subItem.path}`}
                                               target="_blank"
                                               rel="noopener noreferrer"
                                             >
                                               {subItem.label}
                                             </a>
                                           ) : (
-                                            <Link to={`/${subItem.name}`}>
+                                            <Link to={`${subItem.path}`}>
                                               {subItem.label}
                                             </Link>
                                           )}
@@ -404,7 +408,7 @@ const Header = ({ isDark = false }) => {
                               {isExternal ? (
                                 <a
                                   className="nav-link"
-                                  href={`${name}`}
+                                  href={`${path}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
@@ -412,8 +416,8 @@ const Header = ({ isDark = false }) => {
                                 </a>
                               ) : (
                                 <Link
-                                  className="nav-link"
-                                  to={`/${name}`}
+                                  className={`nav-link ${window.location.pathname === path? 'active' : ''}`}
+                                  to={`${path}`}
                                   role="button"
                                   aria-expanded="false"
                                 >

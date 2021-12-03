@@ -132,7 +132,6 @@ const Layout = ({ children, pageContext }: any) => {
           {children}
         </div>
 
-        {/* <ModalVideo /> */}
       </ThemeProvider>
     );
   }

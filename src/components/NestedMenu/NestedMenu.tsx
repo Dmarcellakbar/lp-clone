@@ -30,6 +30,9 @@ const NestedMenuContainer = styled.div`
         }
       }
     }
+    > a.active {
+      color: ${({ theme }) => theme.colors.secondary}!important;
+    }
   }
   .collapse + .list-group-item {
     border-top-width: 0;
@@ -75,10 +78,19 @@ const defaultMenuItems = [
   },
 ];
 
-const MenuItem = ({
+const MenuItem: React.FC<{
+  label?: string
+  isExternal?: boolean
+  name?: string
+  path?: string
+  items?: any[]
+  depthStep?: number
+  depth?: number
+}> = ({
   label,
   isExternal = false,
   name,
+  path,
   items,
   depthStep = 20,
   depth = 0,
@@ -94,10 +106,14 @@ const MenuItem = ({
       {hasSubItems ? (
         <ListGroup.Item
           {...rest}
-          css={`
-            padding-left: ${depth * depthStep}px !important;
-            cursor: pointer;
-          `}
+          // css={`
+          //   padding-left: ${depth * depthStep}px !important;
+          //   cursor: pointer;
+          // `}
+          style={{
+            paddingLeft: `${depth * depthStep}px !important`,
+            cursor: 'pointer',
+          }}
           onClick={() => setOpen(!open)}
           className="d-flex align-items-center justify-content-between"
         >
@@ -107,13 +123,16 @@ const MenuItem = ({
       ) : (
         <ListGroup.Item
           {...rest}
-          css={`
-            padding-left: ${depth * depthStep}px !important;
-          `}
+          // css={`
+          //   padding-left: ${depth * depthStep}px !important;
+          // `}
+          style={{
+            paddingLeft: `${depth * depthStep}px !important`,
+          }}
         >
           {isExternal ? (
             <a
-              href={`${name}`}
+              href={`${path}`}
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
                   gContext.toggleOffCanvas();
@@ -124,7 +143,8 @@ const MenuItem = ({
             </a>
           ) : (
             <Link
-              to={`/${name}`}
+              className={`${window.location.pathname === path? 'active' : ''}`}
+              to={`${path}`}
               onClick={() => {
                 if (gContext.visibleOffCanvas) {
                   gContext.toggleOffCanvas();
