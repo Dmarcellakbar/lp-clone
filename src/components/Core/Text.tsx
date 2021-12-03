@@ -34,7 +34,7 @@ const ParagraphSmall = styled(Paragraph)`
 interface TextProps {
   variant?: string | 'small';
   color?: string;
-  fontSize?: number;
+  fontSize?: number | string;
   lineHeight?: string;
   mb?: number;
   as?: any;

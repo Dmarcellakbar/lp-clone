@@ -20,6 +20,7 @@ const Box = styled.div<{
   minHeight?: any
   bg?: any;
   borderRadius?: any;
+  borderBottom?: any;
   mr?: any;
   ml?: any;
   mt?: any; 
@@ -38,6 +39,7 @@ const Box = styled.div<{
   min-height: ${props => props.minHeight || "0"};
   background-color: ${props => props.bg || "transparent"};
   border-radius: ${props => props.borderRadius || "0"};
+  border-bottom: ${props => props.borderBottom || "0"};
   margin-bottom: ${props => props.mb || "0"};
   margin-left:  ${props => props.ml || "0"};
   margin-right: ${props => props.mr || "0"};
@@ -58,6 +60,7 @@ const Box = styled.div<{
   ${shadow};
   ${props => props.py};
   ${props => props.css}
+  
 `;
 
 export default Box;
