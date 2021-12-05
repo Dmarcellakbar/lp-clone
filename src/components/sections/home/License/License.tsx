@@ -60,7 +60,7 @@ const License: React.FC = () => {
     ]
     return (
         <>
-            <Box pb={10}>
+            <Box pb={40}>
                 <Container>
                     <TitleContainer mb={"10px"}>
                     <Text fontSize={18} as="h4" className="">

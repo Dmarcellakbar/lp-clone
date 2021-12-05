@@ -31,7 +31,7 @@ const SectionTitle = styled.h2<{
 
 const HeroTitle = styled(SectionTitle)`
   letter-spacing: -2.81px;
-  font-size: 40px;
+  font-size: ${props => props.fontSize?.lg || '40px'};
   line-height: 56px;
   margin-bottom: 30px;
 
@@ -41,17 +41,17 @@ const HeroTitle = styled(SectionTitle)`
   }
 
   @media ${device.sm} {
-    font-size: 40px;
+    font-size: ${props => props.fontSize?.sm || '40px'};
     line-height: 70px;
   }
 
   @media ${device.lg} {
-    font-size: 40px;
+    font-size: ${props => props.fontSize?.lg || '40px'};
     line-height: 84px;
   }
 
   @media ${device.xl} {
-    font-size: 50px;
+    font-size: ${props => props.fontSize?.xl || '50px'};
     line-height: 50px;
   }
 `;
