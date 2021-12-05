@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { Title, Box } from "../Core";
 import Logo from "../Logo";
+import { navigate } from "gatsby-link";
 
 const TitleStyled = styled(Title)`
   font-size: 16px;
@@ -98,22 +99,22 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" onClick={() => navigate('/about-us')}>
                             About Us
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" onClick={() => navigate('/consultancy')}>
                             Consultancy
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" onClick={() => navigate('/news')}>
                             News
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" onClick={() => navigate('/education')}>
                             Education
                           </a>
                         </li>
@@ -130,12 +131,12 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
                       </TitleStyled>
                       <UlStyled color={isDark ? "lightShade" : "darkShade"}>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" target="_blank">
                             Terms and Conditions
                           </a>
                         </li>
                         <li>
-                          <a href="/#" target="_blank">
+                          <a href="#" target="_blank">
                             Privacy Policy
                           </a>
                         </li>
