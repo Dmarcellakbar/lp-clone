@@ -6,7 +6,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://cfund.me",
-    title: "Cfund Landing Page",
+    title: "CFUND - Indonesia’s First Crypto Hedge Fund",
+    description: "TAMING THE CRYPTO MARKET. Helping you navigate the digital market. One stop solution for Navigating the Crypto Market",
+    image: "/logo-meta.png"
   },
   plugins: [
     "gatsby-plugin-sass",

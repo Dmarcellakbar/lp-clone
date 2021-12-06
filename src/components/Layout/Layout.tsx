@@ -50,6 +50,7 @@ import { get, merge } from "lodash";
 
 // the full theme object
 import { theme as baseTheme } from "../../utils";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Loader = styled.div`
   position: fixed;
@@ -78,7 +79,22 @@ const getTheme: any = (mode: any) =>{
     colors: get(baseTheme.colors.modes, mode, baseTheme.colors),
 })};
 
+const query = graphql`
+  query SEO {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        image
+      }
+    }
+  }
+`
+
 const Layout = ({ children, pageContext, ...props }: any) => {
+  const { site } = useStaticQuery(query)
+  console.log('site', site)
   const gContext = useContext(GlobalContext);
 
   const [visibleLoader, setVisibleLoader] = useState(true);
@@ -122,6 +138,22 @@ const Layout = ({ children, pageContext, ...props }: any) => {
         <GlobalStyle />
         <Helmet>
           <title>{process.env.GATSBY_TITLE}</title>
+          <meta name="description" content={site.siteMetadata.description} />
+          <meta name="image" content={site.siteMetadata.image} />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={site.siteMetadata.siteUrl} />
+          <meta property="og:title" content={site.siteMetadata.title}/>
+          <meta property="og:description" content={site.siteMetadata.description}/>
+          <meta property="og:image" content={site.siteMetadata.image} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="628" />
+
+          <meta property="twitter:card" content="summary_large_image"/>
+          <meta property="twitter:url" content={site.siteMetadata.siteUrl}/>
+          <meta property="twitter:title" content={site.siteMetadata.title}/>
+          <meta property="twitter:description" content={site.siteMetadata.description}/>
+          <meta property="twitter:image" content={site.siteMetadata.image}></meta>
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">
@@ -147,6 +179,22 @@ const Layout = ({ children, pageContext, ...props }: any) => {
         <GlobalStyle />
         <Helmet>
           <title>{process.env.GATSBY_TITLE}</title>
+          <meta name="description" content={site.siteMetadata.description} />
+          <meta name="image" content={site.siteMetadata.image} />
+
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={site.siteMetadata.siteUrl} />
+          <meta property="og:title" content={site.siteMetadata.title}/>
+          <meta property="og:description" content={site.siteMetadata.description}/>
+          <meta property="og:image" content={site.siteMetadata.image} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="628" />
+
+          <meta property="twitter:card" content="summary_large_image"/>
+          <meta property="twitter:url" content={site.siteMetadata.siteUrl}/>
+          <meta property="twitter:title" content={site.siteMetadata.title}/>
+          <meta property="twitter:description" content={site.siteMetadata.description}/>
+          <meta property="twitter:image" content={site.siteMetadata.image}></meta>
         </Helmet>
         <Loader id="loading" className={visibleLoader ? "" : "inActive"}>
           <div className="load-circle">
