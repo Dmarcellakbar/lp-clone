@@ -5,7 +5,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://cfund.me",
     title: "Cfund Landing Page",
   },
   plugins: [
@@ -52,5 +52,14 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: 'gatsby-plugin-crisp-chat',
+      options: {
+        websiteId: 'db80d842-0185-4580-98e4-dff5ed3a2c59',
+        enableDuringDevelop: false, // Optional. Disables Crisp Chat during gatsby develop. Defaults to true.
+        defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
+        enableImprovedAccessibility: false // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
+      },
+    }
   ],
 };
