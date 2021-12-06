@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: "https://cfund.me",
     title: "CFUND - Indonesia’s First Crypto Hedge Fund",
     description: "TAMING THE CRYPTO MARKET. Helping you navigate the digital market. One stop solution for Navigating the Crypto Market",
-    image: "/logo-meta.png"
+    image: "/logo-meta.jpg"
   },
   plugins: [
     "gatsby-plugin-sass",
