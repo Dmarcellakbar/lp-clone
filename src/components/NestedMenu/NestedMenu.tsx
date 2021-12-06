@@ -31,7 +31,7 @@ const NestedMenuContainer = styled.div`
       }
     }
     > a.active {
-      color: ${({ theme }) => theme.colors.secondary}!important;
+      color: ${({ theme }) => theme.colors.primary}!important;
     }
   }
   .collapse + .list-group-item {

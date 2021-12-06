@@ -136,12 +136,12 @@ const Menu  = styled.ul<MenuProps>`
         padding-right: 18px !important;
       }
       &:hover {
-        color: ${({ theme }) => theme.colors.primary} !important;
+        color: ${({ theme }) => theme.colors.secondary} !important;
       }
     }
 
     > .nav-link.active {
-      color: ${({ theme }) => theme.colors.secondary} !important;
+      color: ${({ theme }) => theme.colors.primary} !important;
     }
   }
   .nav-item.dropdown {

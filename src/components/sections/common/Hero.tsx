@@ -7,8 +7,8 @@ import { Title, Section, Text } from "../../../components/Core";
 const SectionStyled = styled(Section)`
   background-image: linear-gradient(
     147deg,
-    rgba(141, 141, 236, 0.17) 0%,
-    rgba(84, 84, 212, 0) 100%
+    rgba(240, 181, 28, 0.17) 0%,
+    rgba(240, 181, 28, 0) 100%
   );
 `;
 

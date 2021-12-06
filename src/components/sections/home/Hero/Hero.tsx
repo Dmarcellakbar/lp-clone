@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -10,12 +10,12 @@ import {
     Text
 } from "../../../../components/Core";
 
-import GlobalContext from "../../../../context/GlobalContext";
+// import GlobalContext from "../../../../context/GlobalContext";
 
-import { device } from "../../../../utils";
+// import { device } from "../../../../utils";
 import svgHeroShape from "../../../../assets/image/svg/hero-shape-svg.svg";
 // import imgL1HeroPhone from "../../../../assets/image/png/landing1-hero-phone.png";
-import imgL1HeroPhone from '../../../../assets/image/cfund/new-assets/home-hero-app.png'
+// import imgL1HeroPhone from '../../../../assets/image/cfund/new-assets/home-hero-app.png'
 
 const ShapeTopLeft = styled.div`
   position: absolute;
@@ -55,23 +55,23 @@ const ShapeTopLeft = styled.div`
 //   }
 // `;
 
-const ImgRight = styled.img`
-  max-width: 50%;
-  @media ${device.sm} {
-    max-width: 60%;
-  }
-  @media ${device.lg} {
-    max-width: 100%;
-  }
-`;
+// const ImgRight = styled.img`
+//   max-width: 50%;
+//   @media ${device.sm} {
+//     max-width: 60%;
+//   }
+//   @media ${device.lg} {
+//     max-width: 100%;
+//   }
+// `;
 
 const Hero: React.FC = () => {
-  const gContext = useContext(GlobalContext);
+  // const gContext = useContext(GlobalContext);
 
-  const openVideoModal = (e: any) => {
-    e.preventDefault();
-    gContext.toggleVideoModal();
-  };
+  // const openVideoModal = (e: any) => {
+  //   e.preventDefault();
+  //   gContext.toggleVideoModal();
+  // };
 
   return (
     <>

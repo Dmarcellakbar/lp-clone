@@ -210,18 +210,18 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
               <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">
                   <li>
-                    <a href="/#" target="_blank">
+                    <a href="https://twitter.com/cfundID" target="_blank">
                       <i className="icon icon-logo-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="/#" target="_blank">
+                    <a href="https://www.linkedin.com/company/cuan-fund/" target="_blank">
                       <i className="icon icon-logo-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="/#" target="_blank">
-                      <i className="icon icon-logo-facebook"></i>
+                    <a href="https://www.instagram.com/cfund.id/" target="_blank">
+                      <i className="icon icon-logo-instagram"></i>
                     </a>
                   </li>
                 </ul>

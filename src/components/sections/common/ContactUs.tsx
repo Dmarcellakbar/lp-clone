@@ -16,7 +16,7 @@ interface ContactUsProps {
 }
 const ContactUs: React.FC<ContactUsProps> = (
   {
-    backgroundColor = '#f7f7fb', title = 'Contact us,', titleSize = {
+    backgroundColor = 'rgba(240,181,28, 0.2)', title = 'Contact us,', titleSize = {
     sm: '20px',
     lg: '46px',
   }
