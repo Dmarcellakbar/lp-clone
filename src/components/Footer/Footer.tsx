@@ -109,13 +109,13 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
                           </a>
                         </li>
                         <li>
-                          <a href="#" onClick={() => navigate('/news')}>
+                          <a href={process.env.GATSBY_BLOG_URL} target={'_blank'}>
                             News
                           </a>
                         </li>
                         <li>
-                          <a href="#" onClick={() => navigate('/education')}>
-                            Education
+                          <a href="#" onClick={() => navigate('/contact-us')}>
+                            Contact Us
                           </a>
                         </li>
                       </UlStyled>
