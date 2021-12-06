@@ -62,6 +62,7 @@ interface PostCardProps {
   title?: string
   children?: any
   readMore?: boolean
+  link?: string
 }
 
 const PostCard: React.FC<PostCardProps> = ({
@@ -72,6 +73,7 @@ const PostCard: React.FC<PostCardProps> = ({
   title,
   children,
   readMore,
+  link,
   ...rest
 }) => (
   <Card
@@ -80,48 +82,48 @@ const PostCard: React.FC<PostCardProps> = ({
   >
     {horizontal ? (
       <ImageContainerHorizontal>
-        <Link to="/" className="w-100 h-100 d-flex">
+        <a href={link} target={'_blank'} className="w-100 h-100 d-flex">
           <img src={img} alt="" className="w-100 img-fluid" />
           {imgBrand && (
             <BrandImage>
               <img src={imgBrand} alt="" className="img-fluid" />
             </BrandImage>
           )}
-        </Link>
+        </a>
       </ImageContainerHorizontal>
     ) : (
       <Box className="position-relative">
-        <Link to="/" className="w-100 h-100 d-flex">
-          <img src={img} alt="" className="w-100 img-fluid" />
+        <a href={link} target={'_blank'} className="w-100 h-auto d-flex">
+          <img src={img} alt="" className="img-fluid" style={{objectFit: 'cover', height: 200}}/>
           {imgBrand && (
             <BrandImage>
               <img src={imgBrand} alt="" className="img-fluid" />
             </BrandImage>
           )}
-        </Link>
+        </a>
       </Box>
     )}
 
     <CardText>
       {preTitle && (
         <Text fontSize={2} lineHeight={'1.75'} mb={14}>
-          Jan 14, 2020
+          {preTitle}
         </Text>
       )}
 
-      <Link to="/">
+      <a href={link} target={'_blank'}>
         <TitleStyled variant="card" mb="14px">
           {title}
         </TitleStyled>
-      </Link>
+      </a>
       <Text fontSize={2} lineHeight={'1.75'} mb={16}>
         {children}
       </Text>
       {readMore && (
         <Box>
-          <Link to="/">
+          <a href={link} target={'_blank'}>
             <Span color="primary">Continue Reading</Span>
-          </Link>
+          </a>
         </Box>
       )}
     </CardText>

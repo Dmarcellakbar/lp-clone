@@ -9,8 +9,46 @@ import Description from "../components/sections/home/Description";
 // import { Col, Container, Row } from "react-bootstrap";
 
 
-// markup
-const IndexPage = () => {
+import { graphql } from 'gatsby'
+
+export const query = graphql`
+  query NewsQuery {
+    blogPostData {
+      data {
+        id
+        _embedded {
+          wp_featuredmedia {
+            source_url
+          }
+        }
+        title {
+          rendered
+        }
+        date(formatString: "DD MMMM YYYY")
+      }
+    }
+  }
+`
+interface IndexPageProps {
+  data: any
+}
+const IndexPage: React.FC<IndexPageProps> = (props: IndexPageProps) => {
+  const [data, setData ] = React.useState([]);
+
+  React.useEffect(() => {
+    if (props.data.blogPostData.data) {
+      const newData = props.data.blogPostData.data.map((item: any) => {
+        return {
+          title: item.title.rendered,
+          img: item._embedded['wp_featuredmedia'][0].source_url,
+          link: `${process.env.GATSBY_BLOG_URL}/?p=${item.id}`,
+          date: item.date
+        }
+      })
+
+      setData(newData)
+    }
+  }, [props?.data?.blogPostData.data])
   return (
     <PageWrapper footerDark={false}>
         <Hero />
@@ -40,7 +78,9 @@ const IndexPage = () => {
             </Container>
         </Section> */}
         <ContactUs/>
-        <NewsContent/>
+        <NewsContent
+          data={data}
+        />
     </PageWrapper>
   )
 }
