@@ -39,11 +39,12 @@ const ContactUs: React.FC<ContactUsProps> = (
               <FormStyled
                 name="contact1"
                 method="post"
+                action={process.env.GATSBY_FORM_ACTION}
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
                 {/* You still need to add the hidden input with the form name to your JSX form */}
-                <input type="hidden" name="form-name" value="contact1" />
+                {/* <input type="hidden" name="form-name" value="contact1" formAction="https://formspree.io/f/mqkgoqjg" formMethod={'post'} /> */}
                 <Box mb={3}>
                   <Input
                     type="text"
@@ -61,14 +62,14 @@ const ContactUs: React.FC<ContactUsProps> = (
                   />
                 </Box>
 
-                <Box mb={3}>
+                {/* <Box mb={3}>
                   <Input
                     type="text"
                     placeholder="Subject"
                     name="subject"
                     required
                   />
-                </Box>
+                </Box> */}
 
                 <Box mb={3}>
                   <Input

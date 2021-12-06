@@ -109,10 +109,11 @@ const ContactUs2: React.FC<ContactUs2Props> = ({
                         name="contact2"
                         method="post"
                         data-netlify="true"
+                        action={process.env.GATSBY_FORM_ACTION}
                         data-netlify-honeypot="bot-field"
                     >
                     {/* You still need to add the hidden input with the form name to your JSX form */}
-                    <input type="hidden" name="form-name" value="contact2" />
+                    {/* <input type="hidden" name="form-name" value="contact2" /> */}
                     <Box mb={4}>
                         <Title
                             variant="card"
@@ -148,7 +149,7 @@ const ContactUs2: React.FC<ContactUs2Props> = ({
                         />
                     </Box>
 
-                    <Box mb={4}>
+                    {/* <Box mb={4}>
                         <Title
                             variant="card"
                             fontSize="18px"
@@ -164,7 +165,7 @@ const ContactUs2: React.FC<ContactUs2Props> = ({
                             name="service"
                             required
                         />
-                    </Box>
+                    </Box> */}
 
                     <Box mb={4}>
                         <Title
