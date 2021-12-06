@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 
-import { Section, Box } from "../../../../components/Core";
+import { Section, Button } from "../../../../components/Core";
 import PostCard from "../../../../components/PostCard";
-import Pagination, { PageItem } from "../../../../components/Pagination";
 
 import imgB1 from "../../../../assets/image/jpeg/blog-post--img.jpg";
 import imgB2 from "../../../../assets/image/jpeg/blog-post--img-2.jpg";
@@ -50,7 +48,7 @@ const NewsContent = () => (
             </PostCard>
           </Col>
         </Row>
-        <Box className="d-flex justify-content-center" mt={4}>
+        {/* <Box className="d-flex justify-content-center" mt={4}>
           <Pagination>
             <PageItem>
               <FaAngleLeft />
@@ -64,7 +62,25 @@ const NewsContent = () => (
               <FaAngleRight />
             </PageItem>
           </Pagination>
-        </Box>
+        </Box> */}
+        <Row>
+          <Col className="d-flex justify-content-center" lg={12}>
+            <a 
+                href='https://blog.cfund.me'
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <Button 
+                    width="100%"
+                    type="button"
+                    bg={'secondary'}
+                    borderRadius={10} mt={10}
+                >
+                  View More
+                </Button>
+            </a>
+          </Col>
+        </Row>
       </Container>
     </Section>
   </>
