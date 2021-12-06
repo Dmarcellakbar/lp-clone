@@ -35,13 +35,14 @@ export const menuItems: Array<{
   {
     name: "news",
     label: "News",
-    path: '/news'
+    path: 'https://blog.cfund.me',
+    isExternal: true
   },
-  {
-    name: "education",
-    label: "Education",
-    path: '/education'
-  },
+  // {
+  //   name: "education",
+  //   label: "Education",
+  //   path: '/education'
+  // },
   {
     name: "contact-us",
     label: "Contact Us",
