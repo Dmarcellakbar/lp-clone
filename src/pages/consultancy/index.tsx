@@ -1,5 +1,5 @@
 import * as React from "react"
-import Hero from "../../components/sections/common/Hero";
+// import Hero from "../../components/sections/common/Hero";
 import PageWrapper from "../../components/PageWrapper";
 import { ContactUs } from "../../components/sections/common";
 
@@ -8,10 +8,10 @@ import { ContactUs } from "../../components/sections/common";
 const Consultancy = () => {
   return (
     <PageWrapper footerDark={false}>
-        <Hero title="TAMING THE CRYPTO MARKET">
+        {/* <Hero title="TAMING THE CRYPTO MARKET">
             Helping you navigate the digital market. <br/>
             One stop solution for Digital Asset
-        </Hero>
+        </Hero> */}
         {/* <Section className="pb-0">
           <div className="pt-5"></div>
           <Container>
@@ -31,7 +31,7 @@ const Consultancy = () => {
                 sm: '20px',
                 lg: '50px'
             }}
-            backgroundColor={''}
+            // backgroundColor={''}
         />
     </PageWrapper>
   )

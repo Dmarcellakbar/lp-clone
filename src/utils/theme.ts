@@ -17,7 +17,7 @@ const colors = {
   primary: defaultColors.primary,
   secondary: defaultColors.secondary,
   light: defaultColors.white,
-  lightShade: rgba(defaultColors.white, 0.75),
+  lightShade: rgba(defaultColors.white, 1),
   dark: defaultColors.dark,
   darkShade: rgba(defaultColors.dark, 0.75),
   ash: defaultColors.ash,
@@ -29,6 +29,8 @@ const colors = {
   warning: defaultColors.yellow,
   success: defaultColors.green,
   info: defaultColors.info,
+  textHero: '#212841',
+  textHeroEm: '#EE8E35',
 
   modes: {
     dark: {

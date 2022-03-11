@@ -13,7 +13,8 @@ import {
 // import GlobalContext from "../../../../context/GlobalContext";
 
 // import { device } from "../../../../utils";
-import svgHeroShape from "../../../../assets/image/svg/hero-shape-svg.svg";
+// import svgHeroShape from "../../../../assets/image/svg/hero-shape-svg.svg";
+import imgHero from '../../../../assets/image/cfund/new-assets/v2/home-hero.png';
 // import imgL1HeroPhone from "../../../../assets/image/png/landing1-hero-phone.png";
 // import imgL1HeroPhone from '../../../../assets/image/cfund/new-assets/home-hero-app.png'
 
@@ -23,6 +24,27 @@ const ShapeTopLeft = styled.div`
   top: 0;
   transform: translate(-50%, -50%);
 `;
+
+const HeroImageWrapper = styled.div`
+  position: absolute;
+  left: -250px;
+  top: -200px;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  
+`
+
+const HeroImageBoxWrapper = styled(Box)`
+  border-radius: 24px;
+  background-color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 150px;
+`
+
+const TitleHero = styled(Title)`
+  font-weight: 700;
+`
 
 // const TopCard = styled(Box)`
 //   width: 305px;
@@ -76,24 +98,26 @@ const Hero: React.FC = () => {
   return (
     <>
       {/* <!-- Hero Area --> */}
-      <Section className="position-relative">
+      <Section className="position-relative" id={'home'}>
         <div className="pt-5"></div>
-        <ShapeTopLeft>
+        {/* <ShapeTopLeft>
           <img src={svgHeroShape} alt="" className="img-fluid" />
-        </ShapeTopLeft>
+        </ShapeTopLeft> */}
         <Container>
           <Row className="justify-content-center align-items-center">
-            <Col lg="5" md="8" sm="9" className="order-lg-2">
-              <div className="text-center text-lg-right position-relative">
-                {/* <div
+            <Col lg="4" className="order-lg-2">
+              <HeroImageWrapper className="text-center text-lg-right">
+                <div
                   className="img-main"
                   data-aos="fade-down"
                   data-aos-duration="750"
                   data-aos-once="true"
                   data-aos-delay="500"
                 >
-                  <ImgRight src={imgL1HeroPhone} alt="" />
-                </div> */}
+                  <HeroImageBoxWrapper py={[null, null, null, null]}>
+                    <img src={imgHero} alt="" width={550}/>
+                  </HeroImageBoxWrapper>
+                </div>
 
                 {/* <TopCard
                   bg="secondary"
@@ -150,20 +174,20 @@ const Hero: React.FC = () => {
                     Appointment with the doctor was successful. Move to next!
                   </Text>
                 </BottomCard> */}
-              </div>
+              </HeroImageWrapper>
             </Col>
-            <Col lg="7" className="order-lg-1">
+            <Col lg="8" className="order-lg-1">
               <div
                 data-aos="fade-right"
                 data-aos-duration="750"
                 data-aos-once="true"
                 data-aos-delay="500"
               >
-                <Box py={[null, null, null, 5]} pr={5} pt={[4, null]}>
-                  <Title variant="hero">
-                    TAMING THE <em>CRYPTO MARKET</em>
-                  </Title>
-                  <Text mb={4}>
+                <Box py={[null, null, 20, null]} pr={5} pt={[4, null]}>
+                  <TitleHero variant="hero">
+                    TAMING THE <br/> <em>CRYPTO MARKET</em>
+                  </TitleHero>
+                  <Text mb={4} fontSize={18}>
                     Helping you navigate the digital market. <br/>
                     One stop solution for Navigating the Crypto Market
                   </Text>

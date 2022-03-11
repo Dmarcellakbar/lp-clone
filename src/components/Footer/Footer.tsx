@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Title, Box } from "../Core";
 import Logo from "../Logo";
 import { navigate } from "gatsby-link";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const TitleStyled = styled(Title)`
   font-size: 16px;
@@ -24,7 +25,7 @@ const UlStyled = styled.ul<{
       color: ${({ theme, color }) => theme.colors[color]} !important;
       &:hover {
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.secondary} !important;
+        color: ${({ theme }) => theme.colors.primary} !important;
       }
     }
   }
@@ -34,7 +35,7 @@ const CopyRightArea = styled.div<{
   dark?: boolean
 }>`
   border-top: ${({ dark, theme }) =>
-    dark ? `1px solid #2f2f31 ` : `1px solid ${theme.colors.border}`};
+    dark ? `` : `1px solid ${theme.colors.border}`};
 
   padding: 15px 0;
   p {
@@ -76,7 +77,7 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
   return (
     <>
       {/* <!-- Footer section --> */}
-      <Box bg={isDark ? "dark" : "light"}>
+      <Box bg={'#28499C'}>
         <Container>
           <Box
             css={`
@@ -85,7 +86,7 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
           >
             <Row className="justify-content-center">
               <Col lg="2" md="4">
-                <Logo white={isDark} />
+                <Logo white={true} />
               </Col>
               <Col lg="10" md="8" className="mt-5 mt-lg-0">
                 <Row>
@@ -93,30 +94,50 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         variant="card"
-                        color={isDark ? "light" : "dark"}
+                        // color={isDark ? "light" : "dark"}
+                        color="light"
                       >
                         Sitemap
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled
+                        // color={isDark ? "lightShade" : "darkShade"}
+                        color={'lightShade'}
+                      >
                         <li>
-                          <a href="#" onClick={() => navigate('/about-us')}>
+                          <AnchorLink
+                            to="/#about-us"
+                            stripHash
+                            // onClick={() => navigate('/about-us')}
+                          >
                             About Us
-                          </a>
+                          </AnchorLink>
                         </li>
                         <li>
-                          <a href="#" onClick={() => navigate('/consultancy')}>
+                          <AnchorLink
+                            to="/#contact-us"
+                            stripHash
+                            // onClick={() => navigate('/consultancy')}
+                          >
                             Consultancy
-                          </a>
+                          </AnchorLink>
                         </li>
                         <li>
-                          <a href={process.env.GATSBY_BLOG_URL} target={'_blank'}>
+                          <a
+                            href={process.env.GATSBY_BLOG_URL}
+                            rel="noopener"
+                            target={'_blank'}
+                          >
                             News
                           </a>
                         </li>
                         <li>
-                          <a href="#" onClick={() => navigate('/contact-us')}>
+                          <AnchorLink
+                            to="/#contact-us"
+                            stripHash
+                            // onClick={() => navigate('/contact-us')}
+                          >
                             Contact Us
-                          </a>
+                          </AnchorLink>
                         </li>
                       </UlStyled>
                     </div>
@@ -125,18 +146,22 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
                     <div className="mb-5 mb-lg-4">
                       <TitleStyled
                         variant="card"
-                        color={isDark ? "light" : "dark"}
+                        // color={isDark ? "light" : "dark"}
+                        color={'light'}
                       >
                         Disclaimer
                       </TitleStyled>
-                      <UlStyled color={isDark ? "lightShade" : "darkShade"}>
+                      <UlStyled
+                        // color={isDark ? "lightShade" : "darkShade"}
+                        color={'lightShade'}
+                      >
                         <li>
-                          <a href="#" target="_blank">
+                          <a href="https://info.cfund.me/terms-and-conditions/" target="_blank">
                             Terms and Conditions
                           </a>
                         </li>
                         <li>
-                          <a href="#" target="_blank">
+                          <a href="https://info.cfund.me/privacy-and-policies/" target="_blank">
                             Privacy Policy
                           </a>
                         </li>
@@ -202,30 +227,33 @@ const Footer: React.FC<FooterProps> = ({ isDark = true }) => {
               </Col>
             </Row>
           </Box>
-          <CopyRightArea dark={isDark ? true : false}>
+          <CopyRightArea
+            // dark={isDark ? true : false}
+            dark={true}
+          >
             <Row className="align-items-center">
-              <Col sm="6" className="text-sm-left text-center mb-2 mb-sm-0">
-                <p>&copy; 2021 PT Cuma Untuk Anak Negeri, All Rights Reserved</p>
+              <Col sm="12" className="text-center mb-2 mb-sm-0">
+                <p>&copy; 2022 PT Cuma Untuk Anak Negeri, All Rights Reserved</p>
               </Col>
-              <Col sm="6" className="text-sm-right text-center">
+              {/* <Col sm="6" className="text-sm-right text-center">
                 <ul className="social-icons">
                   <li>
-                    <a href="https://twitter.com/cfundID" target="_blank">
+                    <a href="https://twitter.com/cfundID" rel="noopener" target="_blank">
                       <i className="icon icon-logo-twitter"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.linkedin.com/company/cuan-fund/" target="_blank">
+                    <a href="https://www.linkedin.com/company/cuan-fund/" rel="noopener" target="_blank">
                       <i className="icon icon-logo-linkedin"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/cfund.id/" target="_blank">
+                    <a href="https://www.instagram.com/cfund.id/" rel="noopener" target="_blank">
                       <i className="icon icon-logo-instagram"></i>
                     </a>
                   </li>
                 </ul>
-              </Col>
+              </Col> */}
             </Row>
           </CopyRightArea>
         </Container>

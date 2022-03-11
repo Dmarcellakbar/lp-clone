@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const globalStyle = createGlobalStyle`
   body {
-    background-color: ${({ theme }) => theme.colors.bg} !important;
+    background: radial-gradient(45.45% 83.69% at 69.37% 21.88%, #FFFFFF 0%, #F5F6FD 100%)!important;
 
     color: ${({ theme }) => theme.colors.text} !important;
   }

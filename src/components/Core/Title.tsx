@@ -5,8 +5,9 @@ import { device } from "../../utils";
 
 const SectionTitle = styled.h2<{
   fontSize?: any
+  fontWeight?: any
 }>`
-  font-weight: 700;
+  font-weight: ${props => props.fontWeight || 700};
   font-size: ${props => props.fontSize?.lg};
   line-height: 54px;
   margin-bottom: 16px;
@@ -31,12 +32,13 @@ const SectionTitle = styled.h2<{
 
 const HeroTitle = styled(SectionTitle)`
   letter-spacing: -2.81px;
-  font-size: ${props => props.fontSize?.lg || '40px'};
+  font-size: ${props => props.fontSize?.lg || '42px'};
   line-height: 56px;
   margin-bottom: 30px;
+  color: ${({ theme }) => theme.colors.textHero};
 
   em {
-    color: ${({theme}) => theme.colors.primary};
+    color: ${({theme}) => theme.colors.textHeroEm};
     font-style: normal;
   }
 
@@ -51,8 +53,8 @@ const HeroTitle = styled(SectionTitle)`
   }
 
   @media ${device.xl} {
-    font-size: ${props => props.fontSize?.xl || '50px'};
-    line-height: 50px;
+    font-size: ${props => props.fontSize?.xl || '72px'};
+    line-height: 108px;
   }
 `;
 
@@ -79,6 +81,8 @@ export interface TitleProps {
   as?: any
   htmlFor?: any
   className?: string
+  lineHeight?: any
+  fontWeight?: any
 }
 const Title: React.FC<TitleProps> = ({ variant, ...rest }) => {
   let TitleStyled = SectionTitle;

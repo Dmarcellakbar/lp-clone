@@ -52,6 +52,11 @@ const TitleStyled = styled(Title)`
   &:hover {
     color: ${({ theme }) => theme.colors.secondary};
   }
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 interface PostCardProps {
@@ -78,11 +83,12 @@ const PostCard: React.FC<PostCardProps> = ({
 }) => (
   <Card
     className={horizontal ? "d-flex flex-column flex-md-row" : ""}
+    style={{ minHeight: 450}}
     {...rest}
   >
     {horizontal ? (
       <ImageContainerHorizontal>
-        <a href={link} target={'_blank'} className="w-100 h-100 d-flex">
+        <a href={link} rel="noopener" target={'_blank'} className="w-100 h-100 d-flex">
           <img src={img} alt="" className="w-100 img-fluid" />
           {imgBrand && (
             <BrandImage>
@@ -93,8 +99,8 @@ const PostCard: React.FC<PostCardProps> = ({
       </ImageContainerHorizontal>
     ) : (
       <Box className="position-relative">
-        <a href={link} target={'_blank'} className="w-100 h-auto d-flex">
-          <img src={img} alt="" className="img-fluid" style={{objectFit: 'cover', height: 200}}/>
+        <a href={link} rel="noopener" target={'_blank'} className="w-100 h-auto d-flex">
+          <img src={img} alt="" className="img-fluid" style={{objectFit: 'cover'}}/>
           {imgBrand && (
             <BrandImage>
               <img src={imgBrand} alt="" className="img-fluid" />
@@ -111,8 +117,8 @@ const PostCard: React.FC<PostCardProps> = ({
         </Text>
       )}
 
-      <a href={link} target={'_blank'}>
-        <TitleStyled variant="card" mb="14px">
+      <a href={link} rel="noopener" target={'_blank'}>
+        <TitleStyled variant="card" mb="14px" color="secondary">
           {title}
         </TitleStyled>
       </a>
@@ -121,7 +127,7 @@ const PostCard: React.FC<PostCardProps> = ({
       </Text>
       {readMore && (
         <Box>
-          <a href={link} target={'_blank'}>
+          <a href={link} rel="noopener" target={'_blank'}>
             <Span color="primary">Continue Reading</Span>
           </a>
         </Box>

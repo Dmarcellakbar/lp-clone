@@ -1,3 +1,4 @@
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
@@ -32,6 +33,7 @@ const SiteHeader = styled.header<SiteHeaderProps>`
       transform: translateY(0%);
       box-shadow: 0 12px 34px -11px rgba(65, 62, 101, 0.1);
       z-index: 9999;
+      padding: 0;
       background: ${({ dark, theme }) =>
         dark ? theme.colors.dark : theme.colors.light};
     }
@@ -94,7 +96,7 @@ const SiteHeader = styled.header<SiteHeaderProps>`
     border: 1px solid #c31a12;
     background: #f04037;
     color: #fff!important;
-    font-family: "CircularStd", sans-serif;
+    font-family: Poppins;
     font-size: 21px;
     font-weight: 500;
     letter-spacing: -0.66px;
@@ -136,12 +138,12 @@ const Menu  = styled.ul<MenuProps>`
         padding-right: 18px !important;
       }
       &:hover {
-        color: ${({ theme }) => theme.colors.secondary} !important;
+        color: ${({ theme }) => theme.colors.primary} !important;
       }
     }
 
     > .nav-link.active {
-      color: ${({ theme }) => theme.colors.primary} !important;
+      color: ${({ theme }) => theme.colors.secondary} !important;
     }
   }
   .nav-item.dropdown {
@@ -294,9 +296,10 @@ const Header: React.FC <{
   return (
     <>
       <SiteHeader
-        className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
-          showReveal ? "reveal-header" : ""
-        }`}
+        // className={`sticky-header ${showScrolling ? "scrolling" : ""} ${
+        //   showReveal ? "reveal-header" : ""
+        // }`}
+        className="sticky-header scrolling reveal-header"
         dark={isDark}
       >
         <Container fluid>
@@ -422,14 +425,23 @@ const Header: React.FC <{
                                   {label}
                                 </a>
                               ) : (
-                                <Link
+                                // <Link
+                                //   className={`nav-link ${props.location.pathname === path? 'active' : ''}`}
+                                //   to={`${path}`}
+                                //   role="button"
+                                //   aria-expanded="false"
+                                // >
+                                //   {label}
+                                // </Link>
+                                <AnchorLink
                                   className={`nav-link ${props.location.pathname === path? 'active' : ''}`}
-                                  to={`${path}`}
-                                  role="button"
+                                  to={`/#${path}`}
+                                  // role="button"
                                   aria-expanded="false"
+                                  stripHash
                                 >
                                   {label}
-                                </Link>
+                                </AnchorLink>
                               )}
                             </li>
                           )}

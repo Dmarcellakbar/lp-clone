@@ -4,6 +4,7 @@ import { ListGroup, Collapse } from "react-bootstrap";
 import { FaAngleRight, FaAngleDown } from "react-icons/fa";
 import { Link } from "gatsby";
 import GlobalContext from "../../context/GlobalContext";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const NestedMenuContainer = styled.div`
   a {
@@ -144,17 +145,26 @@ const MenuItem: React.FC<{
               {label}
             </a>
           ) : (
-            <Link
-              className={`${props?.location?.pathname === path? 'active' : ''}`}
-              to={`${path}`}
-              onClick={() => {
-                if (gContext.visibleOffCanvas) {
-                  gContext.toggleOffCanvas();
-                }
-              }}
+            // <Link
+            //   className={`${props?.location?.pathname === path? 'active' : ''}`}
+            //   to={`${path}`}
+            //   onClick={() => {
+            //     if (gContext.visibleOffCanvas) {
+            //       gContext.toggleOffCanvas();
+            //     }
+            //   }}
+            // >
+            //   {label}
+            // </Link>
+            <AnchorLink
+              className={`nav-link ${props.location.pathname === path? 'active' : ''}`}
+              to={`/#${path}`}
+              // role="button"
+              aria-expanded="false"
+              stripHash
             >
               {label}
-            </Link>
+            </AnchorLink>
           )}
         </ListGroup.Item>
       )}
