@@ -62,6 +62,21 @@ module.exports = {
         defer: true, // Optional. Sets the Crisp loading script to defer instead of async. Defaults to false.
         enableImprovedAccessibility: false // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Poppins`,
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -80
+      }
     }
   ],
 };

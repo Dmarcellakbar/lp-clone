@@ -4,9 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { Title, Section, Box, Text } from "../../../../components/Core";
 
-import imgPhone from "../../../../assets/image/png/l7-mobile.png";
-
-const SectionStyled = styled(Section)``;
+import imgDescription from '../../../../assets/image/cfund/new-assets/v2/home-description.png';
+const SectionStyled = styled(Section)`
+  background-color: #FFFFFF!important;
+`;
 
 const WidgetContainer = styled(Box)`
   counter-reset: widget-counter;
@@ -51,21 +52,22 @@ const Description = () => {
   return (
     <>
       {/* <!-- Content1 section --> */}
-      <SectionStyled>
+      <SectionStyled id="description">
         <Container>
           <Row className="align-items-center">
-            {/* <Col lg="6" className="mb-4 mb-lg-0 pl-lg-5 order-lg-2">
+            <Col lg="6" className="mb-4 mb-lg-0 pl-lg-5">
               <div
                 data-aos="fade-right"
                 data-aos-duration="750"
                 data-aos-delay="500"
                 data-aos-once="true"
               >
-                <img src={imgPhone} alt="" className="img-fluid" />
+                {/* <img src={imgPhone} alt="" className="img-fluid" /> */}
+                <img src={imgDescription} alt="" className="img-fluid" width={400}/>
               </div>
-            </Col> */}
+            </Col>
             {/* <Col lg="2" className="order-lg-1"></Col> */}
-            <Col lg="10" md={9} className="order-lg-1">
+            <Col lg="6" md={9} className="order-lg-1">
               <div>
                 <Title 
                     // fontSize={{
@@ -74,20 +76,21 @@ const Description = () => {
                     //     xl: '80px'
                     // }}
                     fontSize={{
-                        sm: '20px',
-                        lg: '40px',
-                        xl: '50px'
+                        sm: '36px',
+                        lg: '36px',
+                        xl: '36px'
                     }}
+                    lineHeight={'160%'}
                 >
-                  We are research and consultancy company focusing in digital assets. {" "}
+                  We are research and consultancy company focusing in digital assets. We provide insight and guide you to enter the crypto-space.
+                  {/* We are research and consultancy company focusing in digital assets. {" "} */}
                   {/* <br className="d-none d-sm-block d-md-none d-xl-block" /> */}
-                  We provide insight and guide you to enter the crypto-space.
+                  {/* We provide insight and guide you to enter the crypto-space. */}
                 </Title>
-                <Text>
+                <Text fontSize={16} fontWeight={400} lineHeight={'25.6px'} color={'#4D585D'}>
                     Crypto market offers high return that most of the time, outperform other asset classes. However, its volatility is a major concern as many investors can easily lose money. To enter the crypto market, proper risk management is required.
                 </Text>
-                <br/>
-                <Text>
+                <Text fontSize={16} fontWeight={400} lineHeight={'25.6px'} color={'#4D585D'}>
                     We are here to help you with the consulting service on how to start investing in this hyper-lucrative space. From analysis, education, we got you covered.
                 </Text>
                 {/* <WidgetContainer mt={5}>

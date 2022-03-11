@@ -7,34 +7,58 @@ import { Title, Button, Section, Box, Text, Input } from "../../../components/Co
 const FormStyled = styled.form``;
 
 interface ContactUsProps {
-  backgroundColor?: string;
+  // backgroundColor?: string;
   title?: string
   titleSize?: {
     sm?: string
     lg?: string
   }
+  mt?: number
 }
+
+const RowWrapper = styled(Row)`
+  background: linear-gradient(74.86deg, #FD8803 -17.77%, #F0B61A 65.82%);
+  border-radius: 24px;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 1024px) {
+    padding-left: 0;
+  }
+`
+
+const ButtonSendMessage = styled(Button)`
+  box-shadow: 0px 12px 24px rgba(255, 255, 255, 0.5);
+`
 const ContactUs: React.FC<ContactUsProps> = (
   {
-    backgroundColor = 'rgba(240,181,28, 0.2)', title = 'Contact us,', titleSize = {
-    sm: '20px',
-    lg: '46px',
-  }
+    // backgroundColor = 'rgba(240,181,28, 0.2)', 
+    title = 'Contact Us to schedule a consultancy session on how you want to start investing in crypto market.',
+    // titleSize = {
+    //   sm: '20px',
+    //   lg: '46px',
+    // }
+    mt = 40
 }) => {
   return (
     <>
-      <Section bg={backgroundColor}>
+      <Section mt={`${mt}px`} id="contact-us">
         <Container>
-          <Row className="align-items-center">
+          <Row className="justify-content-center text-center mb-10">
             <Col lg="12">
-              <Box mb={5}>
-                <Title 
-                  fontSize={titleSize}
-                >
-                  {title}
-                </Title>
-              </Box>
+              <Text 
+                fontSize={36}
+                lineHeight={'57.6px'}
+                fontWeight={700}
+              >
+                {title}
+              </Text>
             </Col>
+          </Row>
+          <RowWrapper
+            className="align-items-center"
+          >
             <Col lg="6">
               <FormStyled
                 name="contact1"
@@ -43,6 +67,11 @@ const ContactUs: React.FC<ContactUsProps> = (
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
+                <Box className="mt-5 mb-3">
+                  <Title variant="card" fontSize={24}>
+                    Contact Us
+                  </Title>
+                </Box>
                 {/* You still need to add the hidden input with the form name to your JSX form */}
                 {/* <input type="hidden" name="form-name" value="contact1" formAction="https://formspree.io/f/mqkgoqjg" formMethod={'post'} /> */}
                 <Box mb={3}>
@@ -82,9 +111,15 @@ const ContactUs: React.FC<ContactUsProps> = (
                   />
                 </Box>
 
-                <Button width="100%" type="submit" borderRadius={10}>
+                <ButtonSendMessage
+                  width="100%"
+                  type="submit"
+                  borderRadius={10}
+                  bg="light"
+                  color="primary"
+                >
                   Send Message
-                </Button>
+                </ButtonSendMessage>
               </FormStyled>
             </Col>
             <Col
@@ -115,7 +150,7 @@ const ContactUs: React.FC<ContactUsProps> = (
                 <Text>DKI Jakarta 12720.</Text>
               </Box>
             </Col>
-          </Row>
+          </RowWrapper>
         </Container>
       </Section>
     </>

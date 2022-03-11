@@ -6,10 +6,11 @@ const Paragraph = styled.p<{
   color?: string;
   lineHeight?: any;
   mb?: any;
+  fontWeight?: number | string;
 }>`
   margin-bottom: 0;
   font-size: 21px;
-  font-weight: 300;
+  font-weight: ${props => props?.fontWeight || 300 };
   letter-spacing: -0.66px;
   line-height: 38px;
   color: ${props => props.color || "text"};
@@ -35,6 +36,7 @@ interface TextProps {
   variant?: string | 'small';
   color?: string;
   fontSize?: number | string;
+  fontWeight?: number | string;
   lineHeight?: string;
   mb?: number;
   as?: any;

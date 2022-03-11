@@ -19,24 +19,25 @@ export const menuItems: Array<{
 }> = [
   {
     name: "",
-    path: "/",
+    path: "home",
     label: "Home"
   },
   {
     name: "about-us",
     label: "About Us",
-    path: '/about-us'
+    path: 'about-us'
   },
   {
     name: "consultancy",
     label: "Consultancy",
-    path: '/consultancy'
+    path: 'contact-us'
   },
   {
     name: "news",
     label: "News",
-    path: 'https://blog.cfund.me',
-    isExternal: true
+    // path: 'https://blog.cfund.me',
+    path: 'news',
+    // isExternal: true
   },
   // {
   //   name: "education",
@@ -46,7 +47,7 @@ export const menuItems: Array<{
   {
     name: "contact-us",
     label: "Contact Us",
-    path: '/contact-us'
+    path: 'contact-us'
   },
   // {
   //   name: "pages",

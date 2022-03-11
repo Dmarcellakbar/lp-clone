@@ -20,9 +20,13 @@ const InputSolid = styled.input<{
   display: block;
   padding: 1.275rem 1.75rem;
   background-clip: padding-box;
-  border: ${({ theme }) => `1px solid ${theme.colors.border}`};
-  background-color: ${({ bg, theme }) => bg? bg: theme.colors.light};
-  border-radius: 10px;
+  // border: ${({ theme }) => `1px solid ${theme.colors.border}`};
+  // background-color: ${({ bg, theme }) => bg? bg: theme.colors.light};
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid #FFFFFF;
+  border-radius: 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
   ${color};
   ${space};
   ${typography};
@@ -120,7 +124,7 @@ const Input: React.FC<InputProps> = ({
       width="100%"
       type={type}
       color="text"
-      bg="light"
+      // bg="light"
       placeholder={placeholder}
       focusColor={focusColor}
       css={css}

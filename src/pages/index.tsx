@@ -7,9 +7,10 @@ import NewsContent from "../components/sections/home/NewsContent";
 import Description from "../components/sections/home/Description";
 // import { Section, Text, Title } from "../components/Core";
 // import { Col, Container, Row } from "react-bootstrap";
-
+import imgDefaultNews from '../assets/image/cfund/new-assets/v2/news-default.jpeg';
 
 import { graphql } from 'gatsby'
+import { Teams } from "../components/sections/about-us/index";
 
 export const query = graphql`
   query NewsQuery {
@@ -40,7 +41,7 @@ const IndexPage: React.FC<IndexPageProps> = (props: IndexPageProps) => {
       const newData = props.data.blogPostData.data.map((item: any) => {
         return {
           title: item.title.rendered,
-          img: item._embedded['wp_featuredmedia'][0].source_url,
+          img: item._embedded['wp_featuredmedia'] && item._embedded['wp_featuredmedia'].length? item._embedded['wp_featuredmedia'][0].source_url: imgDefaultNews,
           link: `${process.env.GATSBY_BLOG_URL}/?p=${item.id}`,
           date: item.date
         }
@@ -54,6 +55,7 @@ const IndexPage: React.FC<IndexPageProps> = (props: IndexPageProps) => {
         <Hero />
         <License />
         <Description/>
+        <Teams/>
 
         {/* <Section className="position-relative pb-0" bg="light">
           <Container>
@@ -77,7 +79,9 @@ const IndexPage: React.FC<IndexPageProps> = (props: IndexPageProps) => {
             </Row>
             </Container>
         </Section> */}
-        <ContactUs/>
+        <ContactUs
+          mt={0}
+        />
         <NewsContent
           data={data}
         />

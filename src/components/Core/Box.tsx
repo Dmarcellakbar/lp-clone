@@ -27,6 +27,7 @@ const Box = styled.div<{
   mb?: any;
   mx?: any;
   p?: any;
+  pl?: any;
   pr?: any;
   pt?: any;
   pb?: any;
@@ -48,6 +49,7 @@ const Box = styled.div<{
   padding-right: ${props => props.pr || "0"};
   padding-top: ${props => props.pt || "0"};
   padding-bottom: ${props => props.pb || "0"};
+  padding-left: ${props => props.pl || "0"};
   ${color};
   ${space};
   ${layout};

@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
-import { Section, Button } from "../../../../components/Core";
+import styled from "styled-components";
+import { Section, Button, Text } from "../../../../components/Core";
 import PostCard from "../../../../components/PostCard";
 
 // import imgB1 from "../../../../assets/image/jpeg/blog-post--img.jpg";
@@ -19,13 +19,28 @@ interface NewsContent {
 interface NewsContentProps {
   data: NewsContent[]
 }
+
+const ViewMoreButton = styled(Button)`
+  background: linear-gradient(90deg, #FD8803 0%, #F0B61A 100%);
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 12px 24px rgba(240, 182, 26, 0.5);
+  border-radius: 12px
+`
 const NewsContent: React.FC<NewsContentProps> = (props: NewsContentProps) => {
   return (
     <>
       {/* <!-- Blog section --> */}
-      <Section className="position-relative">
+      <Section className="position-relative" bg={'#FFFFFF'} id="news">
         <Container>
-          <Row className="align-items-center justify-content-center">
+          <Row className="justify-content-center text-center mb-10">
+            <Col lg="12">
+              <Text fontSize={36} lineHeight={'57.6px'} fontWeight={700}>
+                News
+              </Text>
+            </Col>
+          </Row>
+          <Row className="align-items-center justify-content-center" style={{paddingTop: 40}}>
             {
               props.data.map((item, index) => {
                 return (
@@ -66,14 +81,15 @@ const NewsContent: React.FC<NewsContentProps> = (props: NewsContentProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
               >
-                  <Button 
+                  <ViewMoreButton 
                       width="100%"
                       type="button"
-                      bg={'secondary'}
-                      borderRadius={10} mt={10}
+                      borderRadius={10}
+                      mt={10}
+                      fontSize={16}
                   >
                     View More
-                  </Button>
+                  </ViewMoreButton>
               </a>
             </Col>
           </Row>
