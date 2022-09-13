@@ -171,7 +171,7 @@ function PlasmicContactusSection__RenderFunc(props: {
                 sty.link__xNymu
               )}
               component={Link}
-              href={"/" as const}
+              href={"mailto:cs@cfund.id" as const}
               platform={"nextjs"}
             >
               <MailSvgrepoComsvgIcon
@@ -179,15 +179,15 @@ function PlasmicContactusSection__RenderFunc(props: {
                 role={"img"}
               />
 
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__cm2I
-                )}
-              >
-                {"Send Email"}
-              </div>
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text__cm2I
+                  )}
+                >
+                  {"Send Email"}
+                </div>
             </p.Stack>
           </p.Stack>
         ) : null}

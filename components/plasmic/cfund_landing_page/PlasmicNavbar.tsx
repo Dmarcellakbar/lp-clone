@@ -195,7 +195,7 @@ function PlasmicNavbar__RenderFunc(props: {
               href={"/#performance" as const}
               platform={"nextjs"}
             >
-              {"Peformance"}
+              {"Performance"}
             </p.PlasmicLink>
 
             <p.PlasmicLink

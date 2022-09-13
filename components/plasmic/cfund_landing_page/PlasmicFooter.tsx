@@ -174,7 +174,11 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li__yb0Ac
                 )}
               >
-                {"Peformance"}
+                 <p.PlasmicLink
+                 href="/#performance">
+                 {"Performance"}
+                 </p.PlasmicLink>
+                
               </li>
             </ul>
 
@@ -192,8 +196,11 @@ function PlasmicFooter__RenderFunc(props: {
                   projectcss.__wab_text,
                   sty.li__vmmOt
                 )}
-              >
+              >  
+              <p.PlasmicLink
+                href="/#how-to">
                 {"How to"}
+              </p.PlasmicLink>
               </li>
             </ul>
 
@@ -212,7 +219,10 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li__e3BMu
                 )}
               >
-                {"Terms"}
+              <p.PlasmicLink
+                href="/#terms">
+                  {"Terms"}
+              </p.PlasmicLink>
               </li>
             </ul>
 
@@ -231,7 +241,10 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li___7IDid
                 )}
               >
+              <p.PlasmicLink
+                href="/#news">
                 {"News"}
+              </p.PlasmicLink>
               </li>
             </ul>
 
@@ -250,7 +263,10 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li__wuQht
                 )}
               >
+              <p.PlasmicLink
+                href="/#faq">
                 {"FAQ"}
+              </p.PlasmicLink>
               </li>
             </ul>
           </p.Stack>
