@@ -135,16 +135,19 @@ function PlasmicContactusSection__RenderFunc(props: {
             className={classNames(projectcss.all, sty.freeBox__kVuAd)}
           >
             <p.Stack
-              as={p.PlasmicLink}
               hasGap={true}
               className={classNames(
                 projectcss.all,
                 projectcss.a,
                 sty.link___177Vx
               )}
-              component={Link}
-              href={"/" as const}
               platform={"nextjs"}
+              onClick={() => {
+                if (typeof window !== "undefined") {
+                  window.$crisp.push(['do', 'chat:open'])
+                }
+               }}
+             
             >
               <ChatSvgrepoComsvgIcon
                 className={classNames(projectcss.all, sty.svg__zfeN0)}

@@ -79,7 +79,17 @@ function PlasmicHomepage__RenderFunc(props: {
   );
 
   const $props = args;
-
+  React.useEffect(() => {
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "db80d842-0185-4580-98e4-dff5ed3a2c59";
+    (() => {
+      const d = document;
+      const s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
+      d.getElementsByTagName("body")[0].appendChild(s);
+    })();
+  });
   return (
     <React.Fragment>
       <Head>
