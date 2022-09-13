@@ -178,7 +178,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 sty.link__hvZdk
               )}
               component={Link}
-              href={"/" as const}
+              href={"/#" as const}
               platform={"nextjs"}
             >
               {"Home"}
@@ -192,7 +192,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 sty.link__sTl9R
               )}
               component={Link}
-              href={"#performance" as const}
+              href={"/#performance" as const}
               platform={"nextjs"}
             >
               {"Peformance"}
@@ -206,7 +206,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 sty.link__mGlbs
               )}
               component={Link}
-              href={"#how-to" as const}
+              href={"/#how-to" as const}
               platform={"nextjs"}
             >
               {"How to"}
@@ -234,7 +234,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 sty.link__wL80
               )}
               component={Link}
-              href={"#news" as const}
+              href={"/#news" as const}
               platform={"nextjs"}
             >
               {"News"}
@@ -248,7 +248,7 @@ function PlasmicNavbar__RenderFunc(props: {
                 sty.link__ziamf
               )}
               component={Link}
-              href={"#faq" as const}
+              href={"/#faq" as const}
               platform={"nextjs"}
             >
               {"FAQ"}

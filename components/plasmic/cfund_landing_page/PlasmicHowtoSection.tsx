@@ -181,7 +181,7 @@ function PlasmicHowtoSection__RenderFunc(props: {
             )}
           >
             {
-              "Prospective customers can contact us to have a consultation whether investing in digital asset with us aligns with their risk appetite, financial profile, and investment objective. One they are successfully evaluated and their eligibility confirmed, we will provide them detailed information about the investment."
+              "Prospective customers can contact us to have a consultation whether investing in digital asset with us aligns with their risk appetite, financial profile, and investment objective. Once they are successfully evaluated and their eligibility confirmed, we will provide them detailed information about the investment."
             }
           </div>
         </p.Stack>
@@ -228,7 +228,7 @@ function PlasmicHowtoSection__RenderFunc(props: {
             )}
           >
             {
-              "The next step is to formulate a contractual agreement between CFund and the investor. The investor may select the desired investment product that fit their objective. They will also be informed about the condition, performance objectives, as well as the risk involved. Finally, an agreement between CFund and the investor will be signed under a prepared contract. Finally, the contract between the investor and ARK36 is prepared and signed."
+              "The next step is to formulate a contractual agreement between CFund and the investor. The investor may select the desired investment product that fit their objective. They will also be informed about the condition, performance objectives, as well as the risk involved. Finally, an agreement between CFund and the investor will be signed under a prepared contract. Finally, the contract between the investor and CFund is prepared and signed."
             }
           </div>
         </p.Stack>

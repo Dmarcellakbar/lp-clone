@@ -125,7 +125,7 @@ function PlasmicContactusSection__RenderFunc(props: {
             sty.h3
           )}
         >
-          {"let's talk with us"}
+          {"Contact Us"}
         </h3>
 
         {true ? (
