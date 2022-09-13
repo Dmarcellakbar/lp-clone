@@ -1,0 +1,146 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  background: url("/plasmic/cfund_landing_page/images/bgFeepng2.png") top 50% left 50% / cover repeat,
+    var(--token-aVjqAh_pV);
+  min-width: 0;
+  padding: 0px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .root {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.feeContainer {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 1;
+  max-width: 80rem;
+  min-height: 0;
+  padding: 8rem 0px;
+}
+.feeContainer > :global(.__wab_flex-container) {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  min-height: 0;
+  margin-left: calc(0px - 24px);
+  width: calc(100% + 24px);
+}
+.feeContainer > :global(.__wab_flex-container) > :nth-child(2n + 1) {
+  width: calc((100% - 2 * 24px) * 6 / 12);
+}
+.feeContainer > :global(.__wab_flex-container) > :nth-child(2n + 2) {
+  width: calc((100% - 2 * 24px) * 6 / 12);
+}
+.feeContainer > :global(.__wab_flex-container) > *,
+.feeContainer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.feeContainer > :global(.__wab_flex-container) > picture > img,
+.feeContainer
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-left: 24px;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .feeContainer {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    min-width: 0;
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .feeContainer > :global(.__wab_flex-container) {
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+    min-width: 0;
+    margin-top: calc(0px - 46px);
+    height: calc(100% + 46px);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .feeContainer > :global(.__wab_flex-container) > :nth-child(1n + 1) {
+    width: calc((100% - 1 * 24px) * 12 / 12);
+  }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .feeContainer > :global(.__wab_flex-container) > *,
+  .feeContainer > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+  .feeContainer > :global(.__wab_flex-container) > picture > img,
+  .feeContainer
+    > :global(.__wab_flex-container)
+    > :global(.__wab_slot)
+    > picture
+    > img {
+    margin-top: 46px;
+  }
+}
+.column___7PrYu {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 0px;
+}
+.h1 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  color: var(--token-2dOOilx4I);
+  padding-bottom: 2rem;
+  min-width: 0;
+}
+.text {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 800px;
+  padding-bottom: 0px;
+  min-width: 0;
+}
+.column__f4M0W {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 0;
+  padding: 0px;
+}
+.img {
+  position: relative;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img > picture > img {
+  object-fit: cover;
+}
+.img > :global(.__wab_img-spacer) > img {
+  object-fit: cover;
+}
+@media (min-width: 0px) and (max-width: 768px) {
+  .img {
+    width: 80%;
+  }
+}
