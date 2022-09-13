@@ -87,9 +87,8 @@ function PlasmicFaqSection__RenderFunc(props: {
   const [faq, setFaq] = React.useState({left:[],right:[]})
 
   const fetchFaq = async () => {
-    const response = await fetch('/api/faq')
-    const data = await response.json()
-    console.log(data)
+    const response = await fetch('/api/faq');
+    const data = await response.json();
     setFaq(data)
   }
 

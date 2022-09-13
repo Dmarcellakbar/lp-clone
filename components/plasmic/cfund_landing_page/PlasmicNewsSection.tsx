@@ -91,9 +91,8 @@ function PlasmicNewsSection__RenderFunc(props: {
   const [news, setNews] = React.useState([])
 
   const fetchNews = async () => {
-    const response = await fetch('/api/news')
-    const data = await response.json()
-    console.log(data)
+    const response = await fetch('/api/news');
+    const data = await response.json();
     setNews(data)
   }
 
