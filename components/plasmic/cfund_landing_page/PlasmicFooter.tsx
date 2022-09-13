@@ -302,7 +302,10 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li__kPgEp
                 )}
               >
-                {"Terms & Condition"}
+                <p.PlasmicLink
+                  href="https://info.cfund.me/terms-and-conditions/">
+                  {"Terms & Condition"}
+                </p.PlasmicLink>
               </li>
             </ul>
 
@@ -321,7 +324,10 @@ function PlasmicFooter__RenderFunc(props: {
                   sty.li___3XUyx
                 )}
               >
-                {"Privacy Policy"}
+                <p.PlasmicLink
+                  href="https://info.cfund.me/privacy-and-policies/">
+                 {"Privacy Policy"}
+                </p.PlasmicLink>
               </li>
             </ul>
           </p.Stack>
@@ -343,15 +349,22 @@ function PlasmicFooter__RenderFunc(props: {
               hasGap={true}
               className={classNames(projectcss.all, sty.freeBox__jWOiU)}
             >
-              <TwitterSvgrepoCom1SvgIcon
-                className={classNames(projectcss.all, sty.svg__wwpP1)}
-                role={"img"}
-              />
-
-              <InstagramSvgrepoComsvgIcon
-                className={classNames(projectcss.all, sty.svg__kFe0)}
-                role={"img"}
-              />
+              <p.PlasmicLink
+                href="https://twitter.com/cfundasia"
+                target="_blank">
+                <TwitterSvgrepoCom1SvgIcon
+                  className={classNames(projectcss.all, sty.svg__wwpP1)}
+                  role={"img"}
+                />
+              </p.PlasmicLink>
+              <p.PlasmicLink
+                href="https://instagram.com/cfundasia"
+                target="_blank">
+                <InstagramSvgrepoComsvgIcon
+                  className={classNames(projectcss.all, sty.svg__kFe0)}
+                  role={"img"}
+                />
+              </p.PlasmicLink>
 
               <TelegramSvgrepoCom1SvgIcon
                 className={classNames(projectcss.all, sty.svg__gOcOw)}
