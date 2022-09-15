@@ -34,7 +34,7 @@
         "id": "6",
         "group": "General",
         "question": "What and how to change Cfund products for customers?",
-        "answer": "Customer could perform the action via app by witdraw all capitals (after lock period was over) and re-deposit the funds to another products."
+        "answer": "Customer could perform the action via app by withdrawing all capitals (after lock period was over) and re-deposit the funds to another products."
       },
       {
         "id": "7",
@@ -54,7 +54,7 @@
         "id": "2",
         "group": "General",
         "question": "Estimate weekly and monthly profit?",
-        "answer": "Estimate profit percentage for every products on every quarter are below: (CFund Moon (semi-flexible product): Estimate profit per year is 10% > Capital lock: 1 month > Profit WD-able every month); (CFund Stars (mid range): Estimate profit per year is 20% > Capital lock: 3 month / 1 quarter > Profit WD-able every month); (CFund Galaxy (corporate / AI - accredited investor): Estimate profit per year is 30% > Capital lock: 3 month > Profit WD-able every month > Required → contact to CRM only → set a call with Arya & Kurnia (KYC level 2)); CFund Supernova is only for Foreigner customers (Singapore & Malaysia) – Estimate profit per year to be confirmed"
+        "answer": "Estimate profit percentage for every products on every quarter are below: \\n(CFund Moon (semi-flexible product): \\nEstimate profit per year is 10% > Capital lock: 1 month > Profit WD-able every month) \\n(CFund Stars (mid range): Estimate profit per year is 20% > Capital lock: 3 month / 1 quarter > Profit WD-able every month) \\n(CFund Galaxy (corporate / AI - accredited investor): Estimate profit per year is 30% > Capital lock: 3 month > Profit WD-able every month > Required → contact to CRM only → set a call with Arya & Kurnia (KYC level 2)); CFund Supernova is only for Foreigner customers (Singapore & Malaysia) – Estimate profit per year to be confirmed"
       },
       {
         "id": "3",
@@ -78,7 +78,7 @@
         "id": "6",
         "group": "General",
         "question": "Maximum withdrawal every month?",
-        "answer": "Withdraw CFund Moon: remaining capital must be minimum Rp. 5.000.000 as stated on portfolio; Withdraw CFund Stars: remaining capital must be minimum Rp. 50.000.000 as stated on portfolio; Withdraw CFund Galaxy: remaining capital must be minimum Rp. 500.000.000 as stated on portfolio."
+        "answer": "Withdraw CFund Moon: remaining capital must be minimum IDR 5.000.000 as stated on portfolio; Withdraw CFund Stars: remaining capital must be minimum IDR 50.000.000 as stated on portfolio; Withdraw CFund Galaxy: remaining capital must be minimum IDR 500.000.000 as stated on portfolio."
       },
       {
         "id": "7",
