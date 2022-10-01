@@ -124,7 +124,7 @@ function PlasmicHeroSection__RenderFunc(props: {
                   sty.h1
                 )}
               >
-                {"The Best Management Firm Any Crypto Investor Can Dream Of"}
+                {"Crypto Investment Expertise, Simplified"}
               </h1>
 
               <div
