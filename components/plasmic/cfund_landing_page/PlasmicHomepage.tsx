@@ -94,7 +94,7 @@ function PlasmicHomepage__RenderFunc(props: {
     <React.Fragment>
       <Head>
         <title>CFund</title>
-        <meta name='description' content='The Best Management Firm Any Crypto Investor Can Dream Of' />
+        <meta name='description' content='Crypto Investment Expertise, Simplified' />
       </Head>
 
       <style>{`
