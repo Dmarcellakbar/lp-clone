@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,700&display=swap');
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins;
 }
 
 a {
@@ -23,4 +23,59 @@ a {
     color: white;
     background: black;
   }
+}
+
+.fontpoppins700{
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.fontstandard{
+  font-family: 'Poppins';
+  font-weight: 100;
+}
+
+
+
+#button-test:hover {
+  height: 'stretch';
+  box-shadow: #ffa520;
+  background-color: transparent;
+}
+
+#button-test2 {
+  background-color: #ffa520;
+  color: white;
+}
+
+#button-test3 {
+  background-color: transparent;
+  color: #ffa520;
+}
+
+
+#button-test2:hover {
+  background-color: #ffa520;
+  color: white;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
