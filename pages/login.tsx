@@ -26,7 +26,11 @@ export default function CallToActionWithIllustration() {
   const styling = {
     backgroundColor: '#011535',
     backgroundSize: 'cover',
-    color: '#FFF',
+    color: '#FFF', 
+    width:"stretch",
+    height:"100vh",
+    maxHeight: "100%",
+    // maxWidth: '100%',
   }
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -66,18 +70,14 @@ export default function CallToActionWithIllustration() {
       <div id="tsparticles">
        <Particle/>
        </div>
-      <Link href="/">
-        <Wrap>
-          <NavbarDefault/>
-        </Wrap>
-      </Link>
+        <NavbarDefault/>
       <Crisp/>
-      <Container maxW={'80rem'} height={'100vh'} pt={'4rem'} verticalAlign={'center'}>
+      <Container pt={'3rem'} verticalAlign={'center'}>
         <VStack
           textAlign={'center'}
           align={'center'}
           spacing={'4'}
-          py={'4rem'}
+          pt={'2rem'}
           display={'flex'}
           >
           <Heading
@@ -87,21 +87,25 @@ export default function CallToActionWithIllustration() {
           </Heading>
           <Text color={'#FFF'} fontSize={'16px'}>
             For now, the user dashboard can only be accessed through the CFund application,
-            which is <br/> available in several marketplaces
+            which is available in several marketplaces
             </Text>
             <HStack spacing='10px' pb={'30rem'} >
                 <Box cursor={'pointer'}>
                 <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
-                    <Image width={'150%'} height={'50%'} src={AppStoreBadge}/>
+                  <Box width={'8rem'}>
+                    <Image  src={AppStoreBadge}/>
+                    </Box>
                 </Link>
                 </Box>
                 <Box cursor={'pointer'}>
                 <Link href="https://play.google.com/store/apps/details?id=id.cfund.app&hl=in&gl=US" target='_blank'>
-                    <Image width={'175%'} height={'75%'} src={PlayStoreBadge}/>
+                <Box width={'11rem'}>
+                    <Image src={PlayStoreBadge}/>
+                    </Box>
                 </Link>
                 </Box>
             </HStack>
-              <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '0', width: '30rem'}}>
+              <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '0', width: '28rem', maxWidth: '100%'}}>
                     <Image src={phone}/>
               </Wrap>
         </VStack>
