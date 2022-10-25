@@ -64,7 +64,7 @@ export default function Home() {
          <Particle/>
          </div>
     <VStack 
-    pt={'32px'}
+    pt={'1rem'}
     h={'stretch'}
     w={'stretch'} 
     position={'relative'}
@@ -114,12 +114,16 @@ export default function Home() {
                     <HStack spacing='10px' pb={'90px'} >
                         <Box cursor={'pointer'}>
                         <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
-                            <Image width={'150%'} height={'50%'} src={AppStoreBadge}/>
+                            <Box width={'8rem'}>
+                                <Image  src={AppStoreBadge}/>
+                            </Box>
                         </Link>
                         </Box>
                         <Box cursor={'pointer'}>
                         <Link href="https://play.google.com/store/apps/details?id=id.cfund.app&hl=in&gl=US" target='_blank'>
-                            <Image width={'175%'} height={'75%'} src={PlayStoreBadge}/>
+                            <Box width={'11rem'}>
+                                <Image src={PlayStoreBadge}/>
+                            </Box>
                         </Link>
                         </Box>
                     </HStack>
