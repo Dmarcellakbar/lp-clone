@@ -81,7 +81,7 @@ export default function CallToActionWithIllustration() {
           pt={'2rem'}
           >
           <Heading
-            fontWeight={600}
+            fontWeight={600} 
             fontSize={'32px'}>
             Login to your account
           </Heading>
@@ -89,7 +89,7 @@ export default function CallToActionWithIllustration() {
             For now, the user dashboard can only be accessed through the CFund application,
             which is available in several marketplaces
             </Text>
-            <HStack spacing='10px' pb={'30rem'} >
+            <HStack spacing='10px'  >
                 <Box cursor={'pointer'}>
                 <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
                   <Box width={'8rem'}>
@@ -105,7 +105,7 @@ export default function CallToActionWithIllustration() {
                 </Link>
                 </Box>
             </HStack>
-           <Wrap style={{ position: 'absolute', bottom: '0' }}  width={{ sm: '30rem',md: '40rem',lg: '50rem' }}>
+           <Wrap style={{ position: 'absolute', bottom: '0' }}  width={{ sm: '15rem',md: '25rem',lg: '35rem' }}>
                     <Image src={phone}/>
            </Wrap>
         </VStack>
