@@ -18,7 +18,7 @@ import {
   
     return (
       <Box bg='#011535' h={'hug content'} w={'stretch'} maxW={'100%'} color={'white'} fontWeight={'bold'} fontSize={'16px'} position={'fixed'} zIndex={'1'}>
-          <Container w={'100%'} h={'stretch'} maxW={'80rem'} >
+          <Container w={'100%'} maxW={'80rem'} >
           <HStack h={16} alignItems='center' justifyContent={'space-between'} mr={'2%'}>          
               <HStack spacing={8} alignItems={'center'}>
               <Box  h={'30px'} w={'130px'} p='1' cursor={'pointer'}>

@@ -67,18 +67,18 @@ export default function CallToActionWithIllustration() {
         <meta name="twitter:description" content="Our costumized strategy makes crypto investing safer, easier, and more effective for you"/>
         <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/987355942825894028/1033972993854033970/op-image-cfund.png"/>
       </Head>
+
+      <NavbarDefault/>
+      <Crisp/>
       <div id="tsparticles">
        <Particle/>
        </div>
-        <NavbarDefault/>
-      <Crisp/>
       <Container pt={'3rem'} verticalAlign={'center'}>
         <VStack
           textAlign={'center'}
           align={'center'}
           spacing={'4'}
           pt={'2rem'}
-          display={'flex'}
           >
           <Heading
             fontWeight={600}
@@ -105,9 +105,9 @@ export default function CallToActionWithIllustration() {
                 </Link>
                 </Box>
             </HStack>
-              <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '0', width: '28rem', maxWidth: '100%'}}>
+           <Wrap style={{ position: 'absolute', bottom: '0' }}  width={{ sm: '30rem',md: '40rem',lg: '50rem' }}>
                     <Image src={phone}/>
-              </Wrap>
+           </Wrap>
         </VStack>
       </Container>
     </section>
