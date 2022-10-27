@@ -92,7 +92,7 @@ export default function SplitWithImage() {
           initial="hidden"
           animate={control}
           >
-        <Image src={chartNew} priority/>
+        <Image src={chartNew}/>
         </motion.div>
       </Show>
 
@@ -104,7 +104,7 @@ export default function SplitWithImage() {
                     initial="hidden"
                     animate={control}
           >
-        <Image src={chartNew} priority/>
+        <Image src={chartNew}/>
         </motion.div>
       </Show>
       </Flex>

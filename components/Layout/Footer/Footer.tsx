@@ -64,7 +64,6 @@ import {
                   height={'6rem'}>
                 <Image
                     src={Logo}
-                    priority
                 />
                 </Box>
             </Stack>

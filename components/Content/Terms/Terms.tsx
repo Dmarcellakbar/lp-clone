@@ -74,7 +74,7 @@ export default function Terms() {
           initial="hidden"
           animate={control}
         >
-        <Image src={cycle} priority/>
+        <Image src={cycle}/>
         </motion.div>
       </Flex>
       </Show>
@@ -105,7 +105,7 @@ export default function Terms() {
           initial="hidden"
           animate={control}
       >
-        <Image src={cycle} priority/>
+        <Image src={cycle}/>
         </motion.div>
       </Flex>
       </Show>
