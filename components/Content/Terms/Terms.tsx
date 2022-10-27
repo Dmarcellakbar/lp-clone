@@ -10,8 +10,8 @@ import {
   Show,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import bg from '../../../assets/images/bg-fee.png'
-import cycle from '../../../assets/images/cycle-ilustration.png';
+import bg from '../../../assets/images/bg-fee.webp'
+import cycle from '../../../assets/images/cycle-ilustration.webp';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect }  from 'react';
@@ -74,7 +74,7 @@ export default function Terms() {
           initial="hidden"
           animate={control}
         >
-        <Image src={cycle}/>
+        <Image src={cycle} priority/>
         </motion.div>
       </Flex>
       </Show>
@@ -105,7 +105,7 @@ export default function Terms() {
           initial="hidden"
           animate={control}
       >
-        <Image src={cycle}/>
+        <Image src={cycle} priority/>
         </motion.div>
       </Flex>
       </Show>

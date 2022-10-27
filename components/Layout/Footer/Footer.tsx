@@ -10,7 +10,7 @@ import {
     VisuallyHidden,
   } from '@chakra-ui/react';
   import { ReactNode } from 'react';
-  import Logo from '../../../assets/images/logo-white.png'
+  import Logo from '../../../assets/images/logo-white.webp'
   import Image from 'next/image';
   import { FaInstagram, FaTwitter, FaTelegram, FaYoutube } from 'react-icons/fa';
   import { Link } from 'react-scroll'
@@ -59,11 +59,12 @@ import {
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
             <Stack align={'flex-start'}>
-                <Box>
+                <Box
+                  width={'6rem'}
+                  height={'6rem'}>
                 <Image
-                    width={'80%'}
-                    height={'80%'}
                     src={Logo}
+                    priority
                 />
                 </Box>
             </Stack>

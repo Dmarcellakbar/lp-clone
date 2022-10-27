@@ -10,17 +10,14 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import AppStoreBadge from '../assets/images/ios.png';
-import PlayStoreBadge from '../assets/images/android.png';
-import phone from '../assets/images/phone-planet.png';
+import AppStoreBadge from '../assets/images/ios.webp';
+import PlayStoreBadge from '../assets/images/android.webp';
+import phone from '../assets/images/phone-planet.webp';
 import NavbarDefault from '../components/Layout/Navbar/NavbarDefault';
 import Crisp from '../components/Chat/crisp';
 import Head from 'next/head';
 import Link from 'next/link'
-import React, { useEffect }  from 'react';
-import { motion, useAnimation } from "framer-motion";
 import Particle from '../components/Animation/Particle';
-import { useInView } from "react-intersection-observer";
 
 export default function CallToActionWithIllustration() {
   const styling = {
@@ -28,20 +25,10 @@ export default function CallToActionWithIllustration() {
     backgroundSize: 'cover',
     color: '#FFF', 
     width:"stretch",
-    height:"100vh",
+    height:"calc(100vh - var(--vh-offset, 0px))",
     maxHeight: "100%",
     // maxWidth: '100%',
   }
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
 
   return (
     <section style={styling}>
@@ -73,12 +60,11 @@ export default function CallToActionWithIllustration() {
       <div id="tsparticles">
        <Particle/>
        </div>
-      <Container pt={'3rem'} verticalAlign={'center'}>
+      <Container pt={'10rem'} verticalAlign={'center'}>
         <VStack
           textAlign={'center'}
           align={'center'}
           spacing={'4'}
-          pt={'2rem'}
           >
           <Heading
             fontWeight={600} 
@@ -89,24 +75,24 @@ export default function CallToActionWithIllustration() {
             For now, the user dashboard can only be accessed through the CFund application,
             which is available in several marketplaces
             </Text>
-            <HStack spacing='10px'  >
+            <HStack spacing='1rem'  >
                 <Box cursor={'pointer'}>
                 <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
                   <Box width={'8rem'}>
-                    <Image  src={AppStoreBadge}/>
+                    <Image  src={AppStoreBadge} priority/>
                     </Box>
                 </Link>
                 </Box>
                 <Box cursor={'pointer'}>
                 <Link href="https://play.google.com/store/apps/details?id=id.cfund.app&hl=in&gl=US" target='_blank'>
                 <Box width={'11rem'}>
-                    <Image src={PlayStoreBadge}/>
+                    <Image src={PlayStoreBadge} priority/>
                     </Box>
                 </Link>
                 </Box>
             </HStack>
            <Wrap style={{ position: 'absolute', bottom: '0' }}  width={{ sm: '15rem',md: '25rem',lg: '35rem' }}>
-                    <Image src={phone}/>
+                    <Image src={phone} priority/>
            </Wrap>
         </VStack>
       </Container>

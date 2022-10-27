@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Flex, useColorModeValue, HStack, Stack, Text, SimpleGrid, Button, VStack, Center, Container, Spacer } from '@chakra-ui/react';
-import bg from '../../../assets/images/bg-contact2.png'
+import bg from '../../../assets/images/bg-contact2.webp'
 import Link from 'next/link';
 import { ChatIcon, EmailIcon } from '@chakra-ui/icons';
 

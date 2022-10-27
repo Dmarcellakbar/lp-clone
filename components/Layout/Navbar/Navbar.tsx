@@ -10,7 +10,7 @@ import {
 import {  CloseIcon } from '@chakra-ui/icons';
 import { Link } from 'react-scroll'
 import Image from 'next/image'
-import Logo from '../../../assets/images/cfund-text.png';
+import Logo from '../../../assets/images/cfund-text.webp';
 import { AiFillAppstore } from 'react-icons/ai';
 import NextLink from 'next/link'
 export default function Simple() {
@@ -23,7 +23,7 @@ export default function Simple() {
             <HStack spacing={8} alignItems={'center'}>
             <Box  h={'30px'} w={'130px'} p='1' cursor={'pointer'}>
                 <NextLink href="/" >
-                    <Image style={{ height: '24px', width: 'auto' }} className='responsive' src={Logo}/>
+                    <Image src={Logo} alt="logo cfund" priority/>
                 </NextLink>
             </Box>
             </HStack>

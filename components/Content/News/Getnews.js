@@ -70,8 +70,9 @@ export default class Getnews extends React.Component {
                 mt={-6}
                 mx={-6}
                 mb={4}
-                pos={'relative'}>
-                    <Image src={post._embedded["wp:featuredmedia"][0].source_url} style={{ layout: 'fill' }}/>
+                pos={'relative'}
+                w={'auto'}>
+                    <Image src={post._embedded["wp:featuredmedia"][0].source_url} priority/>
                 </Box>
                 <Stack>   
                 <Box w='100%' p={'7%'} >

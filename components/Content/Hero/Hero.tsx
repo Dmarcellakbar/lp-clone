@@ -1,10 +1,10 @@
 import React, { useEffect }  from 'react';
 import Image from 'next/image';
-import phone from '../../../assets/images/phone-planet.png';
+import phone from '../../../assets/images/phone-planet.webp';
 import { Box, Container, GridItem, Heading, Hide, HStack, Show, SimpleGrid,  Text, VStack, Wrap } from '@chakra-ui/react';
-import AppStoreBadge from '../../../assets/images/ios.png';
-import PlayStoreBadge from '../../../assets/images/android.png';
-import bg from '../../../assets/images/bg-stardust-nostar.png'
+import AppStoreBadge from '../../../assets/images/ios.webp';
+import PlayStoreBadge from '../../../assets/images/android.webp';
+import bg from '../../../assets/images/bg-stardust-nostar.webp'
 import Running from './Running'
 import Link from 'next/link';
 import { motion, useAnimation } from "framer-motion";
@@ -55,7 +55,7 @@ export default function Home() {
     <section style={{ 
         backgroundImage: `url('${bg.src}')`,
         width:"stretch",
-        height:"100vh",
+        height:"55rem",
         maxWidth: '100%',
         backgroundSize: 'cover',
         position: 'relative',
@@ -89,7 +89,7 @@ export default function Home() {
                     initial="hidden"
                     animate={control}
                 >
-                <Heading textAlign={'left'} w={'stretch'} fontSize='2.88rem' color={'#01E8AA'} fontWeight={'700'} pt={'90px'} pb={'2rem'} lineHeight={'1.3'} fontFamily={'Poppins'}>
+                <Heading textAlign={'left'} w={'stretch'} fontSize='2.88rem' color={'#01E8AA'} fontWeight={'700'} pt={'6rem'} pb={'2rem'} lineHeight={'1.3'} fontFamily={'Poppins'}>
                     The Best Management Firm Any Crypto Investor Can Dream of
                 </Heading>
                 </motion.div>
@@ -111,18 +111,18 @@ export default function Home() {
                     initial="hidden"
                     animate={control}
                 >
-                    <HStack spacing='10px' pb={'90px'} >
+                    <HStack spacing='1rem' pb={'6rem'} >
                         <Box cursor={'pointer'}>
                         <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
                             <Box width={'8rem'}>
-                                <Image  src={AppStoreBadge}/>
+                                <Image  src={AppStoreBadge} alt='appstore'/>
                             </Box>
                         </Link>
                         </Box>
                         <Box cursor={'pointer'}>
                         <Link href="https://play.google.com/store/apps/details?id=id.cfund.app&hl=in&gl=US" target='_blank'>
                             <Box width={'11rem'}>
-                                <Image src={PlayStoreBadge}/>
+                                <Image src={PlayStoreBadge} alt='playstore'/>
                             </Box>
                         </Link>
                         </Box>
@@ -136,7 +136,7 @@ export default function Home() {
                 flex={'1'}
                 >  
                 <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '55px', right: '0', width: '50%' }}>
-                        <Image  src={phone} />
+                        <Image  src={phone} alt='phone' priority/>
                 </Wrap>
                 </GridItem>
             </Hide>
@@ -146,7 +146,7 @@ export default function Home() {
                 flex={'1'}
                 >  
                 <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '55px', right: '0', width: '50%' }}>
-                        <Image  src={phone} />
+                        <Image  src={phone} alt='phone' priority/>
                 </Wrap>
                 </GridItem>
             </Show>

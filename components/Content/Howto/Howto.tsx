@@ -9,11 +9,11 @@ import {
     VStack,
     Box,
 } from '@chakra-ui/react';
-import bg from '../../../assets/images/bg-how-to.png'
+import bg from '../../../assets/images/bg-how-to.webp'
 import Image from 'next/image';
-import Identity from '../../../assets/images/identity.png';
-import Agreement from '../../../assets/images/agreement.png';
-import Aum from '../../../assets/images/aum-icon.png';
+import Identity from '../../../assets/images/identity.webp';
+import Agreement from '../../../assets/images/agreement.webp';
+import Aum from '../../../assets/images/aum-icon.webp';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import React, { useEffect }  from 'react';
@@ -91,8 +91,8 @@ const item2 = {
             bg={'rgba(1, 38, 76, 0.5)'}
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
-                    <Box p={'32px'}>
-                        <Image src={Identity} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}/>
+                    <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
+                        <Image src={Identity}  priority/>
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                         Registration and Identification
@@ -119,8 +119,8 @@ const item2 = {
             bg={'rgba(1, 38, 76, 0.5)'}
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
-                    <Box p={'32px'}>
-                        <Image src={Agreement} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}/>
+                <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
+                        <Image src={Agreement} priority/>
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                     Product Selection and Agreement
@@ -147,8 +147,8 @@ const item2 = {
             bg={'rgba(1, 38, 76, 0.5)'}
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
-                    <Box p={'32px'}>
-                        <Image src={Aum} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}/>
+                <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
+                        <Image src={Aum} priority/>
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                         Assets Under Management

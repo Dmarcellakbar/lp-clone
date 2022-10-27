@@ -8,7 +8,7 @@ import {
   Button,
   Show,
 } from '@chakra-ui/react';
-import chartNew from '../../../assets/images/chart-new.png'
+import chartNew from '../../../assets/images/chart-new.webp'
 import Image from 'next/image';
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -92,7 +92,7 @@ export default function SplitWithImage() {
           initial="hidden"
           animate={control}
           >
-        <Image src={chartNew}/>
+        <Image src={chartNew} priority/>
         </motion.div>
       </Show>
 
@@ -104,7 +104,7 @@ export default function SplitWithImage() {
                     initial="hidden"
                     animate={control}
           >
-        <Image src={chartNew}/>
+        <Image src={chartNew} priority/>
         </motion.div>
       </Show>
       </Flex>
