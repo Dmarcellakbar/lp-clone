@@ -27,15 +27,6 @@ const item = {
     }
 };
 
-const item2 = {
-  hidden: { y: 100, opacity: 0 },
-  visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.7 }
-  }
-};
-
   export default function Howto() {
     const control = useAnimation();
     const [ref, inView] = useInView();
@@ -53,7 +44,7 @@ const item2 = {
         backgroundSize: 'cover',
     }
     return (
-      <section style={styling}>
+      <div style={styling}>
       <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'} zIndex={'0'}>
       <VStack spacing={2} textAlign="center" mb={'4rem'}>
         <motion.div
@@ -66,20 +57,12 @@ const item2 = {
         <Heading as="h1" color={'white'} fontSize="2.88rem" fontWeight={'bold'} fontFamily='Poppins'>
             Get into Digital Asset Market With Us!
         </Heading>
-        </motion.div>
-        <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={item2}
-                    initial="hidden"
-                    animate={control}
-        >
         <Text fontSize="32px" color={'white'} fontWeight={'bold'} fontFamily='Poppins' mb={'2rem'}>
             Onboarding process
         </Text>
         </motion.div>
       </VStack>
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} textAlign="center" pl={'3%'} pr={'3%'} zIndex={'0'}> 
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} textAlign="center" pl={'1rem'} pr={'1rem'} zIndex={'0'}> 
             <Box
             role={'group'}
             p={6}
@@ -92,7 +75,7 @@ const item2 = {
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
                     <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
-                        <Image src={Identity}  priority/>
+                        <Image src={Identity}  />
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                         Registration and Identification
@@ -120,7 +103,7 @@ const item2 = {
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
                 <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
-                        <Image src={Agreement} priority/>
+                        <Image src={Agreement} />
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                     Product Selection and Agreement
@@ -148,7 +131,7 @@ const item2 = {
             >
                 <Stack textAlign={'center'} spacing={4} align={'center'} verticalAlign={'middle'} alignContent={'center'}>
                 <Box p={'1rem'} style={{ width: '15rem', maxWidth: '100%', height: 'auto' }}>
-                        <Image src={Aum} priority/>
+                        <Image src={Aum} />
                     </Box>
                     <Heading mt={'2rem'} mb={'2rem'} fontSize='20px' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>
                         Assets Under Management
@@ -163,6 +146,6 @@ const item2 = {
             </Box>
         </SimpleGrid>
       </Container>
-      </section>
+      </div>
     );
   }

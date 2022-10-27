@@ -16,25 +16,7 @@ const item = {
     visible: {
         y: 0,
         opacity: 1,
-        transition: { duration: 0.6 }
-    }
-};
-
-const item2 = {
-    hidden: { y: 150, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: { duration: 0.8 }
-    }
-};
-
-const item3 = {
-    hidden: { y: 150, opacity: 0 },
-    visible: {
-        y: 0,
-        opacity: 1,
-        transition: { duration: 1 }
+        transition: { duration: 0.7 }
     }
 };
 
@@ -52,17 +34,14 @@ export default function Home() {
 
 
   return (
-    <section style={{ 
+    <div style={{ 
         backgroundImage: `url('${bg.src}')`,
-        width:"stretch",
         height:"55rem",
         maxWidth: '100%',
         backgroundSize: 'cover',
         position: 'relative',
      }}>
-       <div id="tsparticles">
-         <Particle/>
-         </div>
+    <Particle/> 
     <VStack 
     pt={'1rem'}
     h={'stretch'}
@@ -81,9 +60,7 @@ export default function Home() {
             flex={'1'}
             alignItems={'center'}
             >
-                <div>
                 <motion.div
-                    className="box"
                     ref={ref}
                     variants={item}
                     initial="hidden"
@@ -92,25 +69,9 @@ export default function Home() {
                 <Heading textAlign={'left'} w={'stretch'} fontSize='2.88rem' color={'#01E8AA'} fontWeight={'700'} pt={'6rem'} pb={'2rem'} lineHeight={'1.3'} fontFamily={'Poppins'}>
                     The Best Management Firm Any Crypto Investor Can Dream of
                 </Heading>
-                </motion.div>
-                <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={item2}
-                    initial="hidden"
-                    animate={control}
-                >
                 <Text textAlign={'left'} fontFamily={'Poppins'} fontSize='16px' color={'#FFFFFF6a'} >
                     Our costumized strategy makes crypto investing safer, easier, and more effective for you
                 </Text>
-                </motion.div>
-                <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={item3}
-                    initial="hidden"
-                    animate={control}
-                >
                     <HStack spacing='1rem' pb={'6rem'} >
                         <Box cursor={'pointer'}>
                         <Link href="https://apps.apple.com/sg/app/cfund/id1580696846?l=id" target='_blank'>
@@ -128,18 +89,8 @@ export default function Home() {
                         </Box>
                     </HStack>
                 </motion.div>
-                </div>
             </GridItem>
             <Hide below='sm'>
-                <GridItem 
-                display={'flex'}
-                flex={'1'}
-                >  
-                <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '55px', right: '0', width: '50%' }}>
-                        <Image  src={phone} alt='phone' priority/>
-                </Wrap>
-                </GridItem>
-            </Hide>
             <Show above='md'>
                 <GridItem 
                 display={'flex'}
@@ -150,11 +101,12 @@ export default function Home() {
                 </Wrap>
                 </GridItem>
             </Show>
+            </Hide>
 
             </SimpleGrid>
         </Container>
         <Running />
       </VStack>
-    </section>
+    </div>
   )
 }

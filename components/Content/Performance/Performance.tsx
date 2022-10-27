@@ -44,25 +44,6 @@ const item2 = {
   
 };
 
-const item3 = {
-  hidden: { y: 100, opacity: 0 },
-  visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.8 }
-  }
-  
-};
-
-const item4 = {
-  hidden: { y: 100, opacity: 0 },
-  visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 1 }
-  }
-};
-
 export default function SplitWithImage() {
   const control = useAnimation();
     const [ref, inView] = useInView();
@@ -80,8 +61,8 @@ export default function SplitWithImage() {
     backgroundSize: 'cover',
   }
   return (
-    <section style={styling}>
-    <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
+    <div style={styling}>
+    <Container maxW={'100%'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Flex>
       <Show breakpoint='(min-width: 900px)'>
@@ -117,14 +98,6 @@ export default function SplitWithImage() {
                     animate={control}
           >
           <Heading mt={'4rem'} mb={'2rem'} fontSize='2.88rem' color={'#FFF'} fontWeight={'700'} fontFamily={'Poppins'}>Our Performance</Heading>
-          </motion.div>
-          <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={item3}
-                    initial="hidden"
-                    animate={control}
-          >
           <Text color={'white'} fontSize={'16px'} fontFamily={'Poppins'}>
             Our advanced risk management strategy allowed us to be consistenly
             profitable during both uptrend and downtrend.
@@ -133,20 +106,12 @@ export default function SplitWithImage() {
             CFund manages your capital with rigorous position sizing, advanced trading
             strategy, and a conservative stop loss.
           </Text>
-          </motion.div>
-          <motion.div
-                    className="box"
-                    ref={ref}
-                    variants={item4}
-                    initial="hidden"
-                    animate={control}
-          >
           <Link href='Login' target='_blank'><Button id='button-test2' color={'white'} fontSize='16px' backgroundColor={'#ffa520'} p={'24px'} fontFamily={'Poppins'}>See Performance Details</Button></Link>
           </motion.div>
         </Stack>
         
       </SimpleGrid>
     </Container>
-    </section>
+    </div>
   );
 }

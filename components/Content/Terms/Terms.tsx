@@ -62,7 +62,7 @@ export default function Terms() {
       backgroundSize: 'cover',
   }
   return (
-    <section style={styling}>
+    <div style={styling}>
     <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Show breakpoint='(max-width: 900px)'>
@@ -112,6 +112,6 @@ export default function Terms() {
       </SimpleGrid>
 
     </Container>
-    </section>
+    </div>
   );
 }

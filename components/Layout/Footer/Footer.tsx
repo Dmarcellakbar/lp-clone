@@ -27,7 +27,7 @@ import {
   }) => {
     return (
       <chakra.button
-        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+        bg={'whiteAlpha.100'}
         rounded={'full'}
         w={8}
         h={8}
@@ -39,7 +39,7 @@ import {
         justifyContent={'center'}
         transition={'background 0.3s ease'}
         _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+          bg: 'whiteAlpha.200',
         }}>
         <VisuallyHidden>{label}</VisuallyHidden>
         {children}
@@ -49,13 +49,12 @@ import {
   
   export default function Footer() {
     return (
-      <section className="section position-relative">
       <Box
         fontFamily={'Poppins'}
         pt={'3rem'}
         pb={'2rem'}
-        bg={useColorModeValue('#011535', '#011535')}
-        color={useColorModeValue('gray.100', 'gray.100')}>
+        bg={'#011535'}
+        color={'gray.100'}>
         <Container as={Stack} maxW={'6xl'} py={10}>
           <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={8}>
             <Stack align={'flex-start'}>
@@ -125,6 +124,5 @@ import {
           </Text>
         </Box>
       </Box>
-      </section>
     );
   }

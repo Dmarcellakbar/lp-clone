@@ -1,4 +1,4 @@
-import { Box, Center, HStack } from '@chakra-ui/react'
+import { Box, HStack } from '@chakra-ui/react'
 import React from "react";
 import Marquee from "react-fast-marquee";
 import Image from 'next/image';
@@ -14,7 +14,7 @@ import jagoLogo from '../../../assets/images/jagoLogo.webp'
  
 export default function Running() { 
   return (
-    <Box bg='#011C3F' h={'60px'} w={'stretch'} maxW={'100%'} zIndex={'0'}>
+    <Box bg='#011C3F' h={'4rem'} maxW={'100%'} zIndex={'0'}>
         <Marquee gradient={false} speed={30}>
             <HStack>
                 <Box width={'6rem'} >

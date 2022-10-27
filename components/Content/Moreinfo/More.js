@@ -1,10 +1,8 @@
 import React from 'react';
-import { Box, Flex, useColorModeValue, HStack, Stack, Text, SimpleGrid, Button, VStack, Center, Container, Spacer } from '@chakra-ui/react';
+import { Box, HStack,  Text, SimpleGrid, Button, VStack } from '@chakra-ui/react';
 import bg from '../../../assets/images/bg-contact2.webp'
 import Link from 'next/link';
 import { ChatIcon, EmailIcon } from '@chakra-ui/icons';
-
-
 
 export default class Getnews extends React.Component {
     render() {
@@ -18,8 +16,8 @@ export default class Getnews extends React.Component {
         }
 
     return (
-        <section style={styling} >
-        <VStack spacing={0} textAlign="center" pt={'3rem'} px={'2rem'}>
+        <div style={styling} >
+        <VStack textAlign="center" pt={'3rem'} px={'2rem'}>
             <VStack rounded={'20'} style={stylingbg} w={'stretch'} maxW={'80rem'}>
                 <Box py={0}>
                         <VStack style={{ textAlign: 'center', marginTop: '2rem'}}>
@@ -28,7 +26,7 @@ export default class Getnews extends React.Component {
                                 Need more information?
                             </Text>
                             </Box>
-                            <Text as={'b'} fontSize='32px' color={'white'}>
+                            <Text as={'b'} fontSize='1.5rem' color={'white'}>
                                 let's talk with us
                             </Text>
                         </VStack>
@@ -54,7 +52,7 @@ export default class Getnews extends React.Component {
                     </VStack>
             </VStack>
         </VStack>
-        </section>
+        </div>
     );
   }
 }

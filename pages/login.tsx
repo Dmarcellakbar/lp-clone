@@ -27,11 +27,10 @@ export default function CallToActionWithIllustration() {
     width:"stretch",
     height:"calc(100vh - var(--vh-offset, 0px))",
     maxHeight: "100%",
-    // maxWidth: '100%',
   }
 
   return (
-    <section style={styling}>
+    <div style={styling}>
       <Head>
         <link rel="shortcut icon" href="/logo-white.png" />
         <title>The Best Management Firm Any Crypto Investor Can Dream of</title>
@@ -57,9 +56,7 @@ export default function CallToActionWithIllustration() {
 
       <NavbarDefault/>
       <Crisp/>
-      <div id="tsparticles">
        <Particle/>
-       </div>
       <Container pt={'10rem'} verticalAlign={'center'}>
         <VStack
           textAlign={'center'}
@@ -96,7 +93,7 @@ export default function CallToActionWithIllustration() {
            </Wrap>
         </VStack>
       </Container>
-    </section>
+    </div>
   );
 }
 

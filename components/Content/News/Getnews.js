@@ -41,14 +41,14 @@ export default class Getnews extends React.Component {
     const parse = require('html-react-parser');
 
     return (
-          <section style={styling}>
+          <div style={styling}>
              <Container maxW={'80rem'} pt={'8rem'} pb={'3rem'} verticalAlign={'center'} fontFamily='Poppins'>
             <VStack spacing={2} textAlign="center" mb={'4rem'}>
                 <Heading as="h1" color={'white'} fontSize="2.88rem" fontWeight={'bold'} fontFamily='Poppins'>
                     News & Article
                 </Heading>
             
-            <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10} textAlign="left" pl={'3%'} pr={'3%'} > 
+            <SimpleGrid columns={{ base: 1, md: 4 }} spacing={10} textAlign="left" pl={'1rem'} pr={'1rem'} > 
             {this.state.posts.map((post) => (
             <Link href={post._embedded["wp:featuredmedia"][0].link} id="button-test">
             <Box
@@ -70,12 +70,11 @@ export default class Getnews extends React.Component {
                 mt={-6}
                 mx={-6}
                 mb={4}
-                pos={'relative'}
-                w={'auto'}>
-                    <Image src={post._embedded["wp:featuredmedia"][0].source_url} priority/>
+                pos={'relative'}>
+                    <Image src={post._embedded["wp:featuredmedia"][0].source_url} style={{ layout: 'fill' }}/>
                 </Box>
                 <Stack>   
-                <Box w='100%' p={'7%'} >
+                <Box w='100%' p={'0.5rem'} >
                         <Text as={'b'} fontSize={'16px'} fontWeight={'bold'}>{post.title.rendered}</Text>
                         <Text fontSize={'16px'} mt={'4'} color={'grey'}>
                             {dateFormat(post.date, "fullDate")}
@@ -93,11 +92,11 @@ export default class Getnews extends React.Component {
             </SimpleGrid>
             </VStack>
             <VStack spacing={2} textAlign="center" mt={'2rem'} mb={'2rem'}>
-            <Link href={'https://blog.cfund.me/'} ><Button id='button-test2' p={'24px'} mb={'2rem'} color={'white'} backgroundColor={'#ffa520'} fontSize={'16px'}>View More</Button></Link>
+            <Link href={'https://blog.cfund.me/'} ><Button id='button-test2' p={'1.5rem'} mb={'2rem'} color={'white'} backgroundColor={'#ffa520'} fontSize={'18px'}>View More</Button></Link>
             </VStack>
             
             </Container>
-          </section>
+          </div>
     );
   }
 }
