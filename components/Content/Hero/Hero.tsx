@@ -96,7 +96,7 @@ export default function Home() {
                 display={'flex'}
                 flex={'1'}
                 >  
-                <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '55px', right: '0', width: '50%' }}>
+                <Wrap style={{ position: 'absolute', display: 'flex', flex: '1', bottom: '55px', right: '0', width: '45rem' }}>
                         <Image  src={phone} alt='phone' priority/>
                 </Wrap>
                 </GridItem>

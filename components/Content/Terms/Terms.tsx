@@ -66,7 +66,7 @@ export default function Terms() {
     <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Show breakpoint='(max-width: 900px)'>
-      <Flex>
+      <Flex w={'40rem'}>
         <motion.div
           className="box"
           ref={ref}
@@ -97,7 +97,7 @@ export default function Terms() {
         </Stack>
         </motion.div>
         <Show breakpoint='(min-width: 900px)'>
-      <Flex>
+      <Flex w={'40rem'}>
       <motion.div
           className="box"
           ref={ref}
