@@ -62,7 +62,7 @@ export default function SplitWithImage() {
   }
   return (
     <div style={styling}>
-    <Container maxW={'100%'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
+    <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
       <Flex w={'40rem'}>
       <Show breakpoint='(min-width: 900px)'>
