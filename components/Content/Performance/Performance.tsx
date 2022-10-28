@@ -64,7 +64,7 @@ export default function SplitWithImage() {
     <div style={styling}>
     <Container maxW={'80rem'} pt={'8rem'} pb={'8rem'} verticalAlign={'center'}>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-      <Flex w={'40rem'}>
+      <Flex>
       <Show breakpoint='(min-width: 900px)'>
       <motion.div
           className="box"
